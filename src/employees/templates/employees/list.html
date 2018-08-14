@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %} Employyes|{{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<div style="float:right">
+    <a href='{% url "employees:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Employee</a>
+</div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Employee List</a></li>
+    </ol>
+</nav>
+<hr>
+
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>S.N.</th>
+        <th>Name</th>
+        <th>Tumbnail</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Position</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in object_list %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td> {{ obj }} </td>
+        <th><img src="{{ obj.picture.url }}" width="50" height="60"></th>
+        <td>{{ obj.mobile }}</td>
+        <td>{{ obj.email }}</td>
+        <td>{{ obj.position }}</td>
+        <td>
+            <a href="{% url 'employees:edit' obj.id %}">
+                <i class="fas fa-pen-square" title="edit"></i>
+            </a> &nbsp;
+            <a href="{% url 'employees:delete' obj.id %}" data-toggle="modal" data-target="#obj-{{ obj.id }}">
+                <i class="far fa-trash-alt" title="delete"></i>
+            </a>
+            <!-- Modal -->
+            <div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are You Sure?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="{% url 'employees:delete' obj.id %}">
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

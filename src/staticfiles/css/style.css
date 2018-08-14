@@ -1,0 +1,31 @@
+.bg-light {
+    background-color: #f94a12 !important;
+}
+
+ol.breadcrumb {
+    background:none !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #fff;
+}
+
+.dropdown, .dropup {
+    position: unset;
+}
+
+.footer{
+  background: #f94a12a1;
+  padding: 10px 0px;
+  position: fixed;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+}
+.footer p{
+  margin-bottom: 0px;
+}
+
+a {
+    color: #0713ccf7;
+}

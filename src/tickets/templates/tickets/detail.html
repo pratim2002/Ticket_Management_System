@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block head_title %} Ticket Detail| {{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'tickets:list' %}">Tickets</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ object.organization_id }}</li>
+  </ol>
+</nav>
+<hr>
+
+<div class="row">
+    <div class="offset-md-1 col-md-10">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td>Organization Name</td>
+                <td> {{ object.organization_id }} </td>
+            </tr>
+            <tr>
+                <td>Ticket Type</td>
+                <td>{{ object.ticket_type }}</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>{{ object.description }}</td>
+            </tr>
+            <tr>
+                <td>Issue Date</td>
+                <td>{{ object.issue_date }}</td>
+            </tr>
+            <tr>
+                <td>Completion Date</td>
+                <td>{{ object.completion_date }}</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>{{ object.status }}</td>
+        </table>
+    </div>
+</div>
+{% endblock %}

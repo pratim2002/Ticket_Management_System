@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href='{% url "users:index" %}'>TMS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href='{% url "organizations:list" %}'>ORGANIZATION</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href='{% url "tickets:list" %}'>TICKETS</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href='{% url "employees:list" %}'>EMPLOYEE</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false"><i class="fa fa-user-circle fa-2x"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button">Change Password</button>
+                    <a href="{% url 'users:logout' %}" class="dropdown-item">Logout</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
