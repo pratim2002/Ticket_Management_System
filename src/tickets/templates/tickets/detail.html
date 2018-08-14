@@ -12,7 +12,7 @@
 <hr>
 
 <div class="row">
-    <div class="offset-md-1 col-md-10">
+    <div class="offset-md-2 col-md-8">
         <table class="table table-bordered table-hover">
             <tr>
                 <td>Organization Name</td>
@@ -37,6 +37,17 @@
             <tr>
                 <td>Status</td>
                 <td>{{ object.status }}</td>
+            </tr>
+            <tr>
+                <td>Employee</td>
+                <td>{{ object.employee_id }}</td>
+            </tr>
+            <tr>
+                <td>Attached File</td>
+                <td><img src="{{ object.attached_file.url|default_if_none:'#' }}" width="120" height="100"> <br>
+                <a href="{{ object.attached_file.url }}"> View Full Size</a>
+                </td>
+            </tr>
         </table>
     </div>
 </div>

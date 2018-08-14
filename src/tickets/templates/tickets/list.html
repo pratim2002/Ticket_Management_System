@@ -23,6 +23,7 @@
         <th>Issue Date</th>
         <th>Completion Date</th>
         <th>Status</th>
+        <th>Employee</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -35,6 +36,7 @@
         <td>{{ obj.issue_date }}</td>
         <td>{{ obj.completion_date }}</td>
         <td>{{ obj.status }}</td>
+        <td>{{ obj.employee_id }}</td>
         <td>
             <a href="{% url 'tickets:edit' obj.id %}">
                 <i class="fas fa-pen-square" title="edit"></i>

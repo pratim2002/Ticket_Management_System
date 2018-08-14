@@ -12,7 +12,7 @@ def listview(request):
     return render(request, 'tickets/list.html', context)
 
 def createview(request):
-    form = CreateForm(request.POST or None)
+    form = CreateForm(request.POST, request.FILES)
     errors = None
     if form.is_valid():
         instance = form.save(commit=False)
@@ -27,7 +27,7 @@ def createview(request):
 
 def editview(request, id=None):
     instance = get_object_or_404(Ticket, id=id)
-    form = CreateForm(request.POST or None, instance=instance)
+    form = CreateForm(request.POST or None, request.FILES or None, instance=instance)
     errors = None
     if form.is_valid():
         instance = form.save(commit=False)

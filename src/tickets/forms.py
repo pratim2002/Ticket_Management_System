@@ -12,12 +12,17 @@ class CreateForm(forms.ModelForm):
             'issue_date',
             'completion_date',
             'status',
+            'employee_id',
+            'attached_file',
         ]
         widgets = {
             'organization_id': forms.Select(attrs={'class': 'form-control'}),
             'ticket_type': forms.Select(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'description'}),
-            'issue_date': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'issue_date'}),
+            'issue_date': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'issue_date', 'id': 'datepicker' }),
             'completion_date': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'completeion_date'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
+            'employee_id': forms.Select(attrs={'class': 'form-control'}),
+            'attached_file': forms.FileInput(attrs={'class': 'form-control'}),
         }
+

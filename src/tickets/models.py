@@ -1,7 +1,7 @@
 from django.db import models
 
 from organizations.models import Organization
-
+from employees.models import Employee
 # Create your models here.
 TICKET_TYPE = (
         ('PROBLEM', 'Problem'),
@@ -20,6 +20,8 @@ class Ticket(models.Model):
     issue_date      = models.DateField(auto_now_add=False, auto_now=False)
     completion_date = models.DateField(auto_now_add=False, auto_now=False)
     status          = models.CharField(max_length=10, choices=STATUS, default=STATUS[0][0])
+    employee_id     = models.ForeignKey(Employee, on_delete=models.SET_NULL, blank=True, null=True)
+    attached_file   = models.ImageField(upload_to='ticket_file/', null=True, blank=True)
     created_at      = models.DateTimeField(auto_now_add = True)
     updated_at      = models.DateTimeField(auto_now = True)
 
