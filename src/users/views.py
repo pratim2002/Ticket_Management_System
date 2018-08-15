@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, PasswordChangeForm
 # Create your views here.
 
 @login_required
@@ -58,6 +58,23 @@ def user_login(request):
                 return redirect('users:index')
 
     return render(request, 'users/login.html', context)
+
+@login_required
+def user_password_change(request):
+    """
+    Change user password
+    """
+    form = PasswordChangeForm(data=request.POST or None, user=request.user)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Password changed successfully")
+            return redirect('users:index')
+
+    context = {
+        'form': form
+    }
+    return render(request, 'users/change_password.html', context)
 
 def user_logout(request):
     """

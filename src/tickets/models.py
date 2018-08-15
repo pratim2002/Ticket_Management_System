@@ -17,7 +17,7 @@ class Ticket(models.Model):
     organization_id = models.ForeignKey(Organization, on_delete=models.CASCADE)
     ticket_type     = models.CharField(max_length=40, choices=TICKET_TYPE)
     description     = models.TextField(max_length=400)
-    issue_date      = models.DateField(auto_now_add=False, auto_now=False)
+    issue_date      = models.DateField(auto_now_add=True, auto_now=False)
     completion_date = models.DateField(auto_now_add=False, auto_now=False)
     status          = models.CharField(max_length=10, choices=STATUS, default=STATUS[0][0])
     employee_id     = models.ForeignKey(Employee, on_delete=models.SET_NULL, blank=True, null=True)

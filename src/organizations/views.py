@@ -1,14 +1,26 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import CreateForm
 from .models import Organization
 # Create your views here.
 
 def listview(request):
-    queryset = Organization.objects.all()
+    queryset_list = Organization.objects.all()
+    paginator = Paginator(queryset_list, 10)
+
+    page = request.GET.get('page')
+
+    try:
+        queryset = paginator.page(page)
+    except PageNotAnInteger:
+        queryset = paginator.page(1)
+    except EmptyPage:
+        queryset = paginator.page(paginator.num_pages)
+
     context = {
-        'object_list' : queryset
+        'object_list' : queryset,
     }
     return render(request, 'organizations/list.html', context)
 

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href='{% url "users:index" %}'>TMS</a>
+    <a class="navbar-brand" href='{% url "users:index" %}'><i class="fas fa-home white"></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -14,12 +14,20 @@
                 <a class="nav-link" href='{% url "tickets:list" %}'>TICKETS</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href='{% url "users:logout" %}'>LOGOUT</a>
+                <a class="nav-link" href='{% url "employees:list" %}'>EMPLOYEE</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false"><i class="fa fa-user-circle fa-2x"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="{% url 'users:change_password' %}" class="dropdown-item">Change Password</a>
+                    <a href="{% url 'users:logout' %}" class="dropdown-item">Logout</a>
+                </div>
+            </li>
+        </ul>
+
     </div>
 </nav>
