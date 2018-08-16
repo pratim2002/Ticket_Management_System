@@ -21,6 +21,6 @@ class CreateForm(forms.ModelForm):
             'completion_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date', 'placeholder': 'completeion_date'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
             'employee_id': forms.Select(attrs={'class': 'form-control'}),
-            'attached_file': forms.FileInput(attrs={'class': 'form-control'}),
+            'attached_file': forms.FileInput(attrs={'class': 'form-control' }),
         }
 

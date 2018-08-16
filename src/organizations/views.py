@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.template.loader import get_template
 
 from .forms import CreateForm
 from .models import Organization
+from .utils import render_to_pdf
 # Create your views here.
 
 def listview(request):
@@ -61,4 +63,15 @@ def deleteview(request, id=None):
 def detailview(request, id=None):
     object = get_object_or_404(Organization, id=id)
     return render(request, 'organizations/detail.html', {'object': object})
+
+def pdf_generate_view(request, *args, **kwargs):
+    queryset = Organization.objects.all()
+    template = get_template('organizations/org_list_pdf.html')
+    context = {
+        'object_list': queryset,
+    }
+    html = template.render(context)
+    pdf = render_to_pdf('organizations/org_list_pdf.html', context)
+    # return HttpResponse(pdf, content_type='application/pdf')
+    return pdf
 

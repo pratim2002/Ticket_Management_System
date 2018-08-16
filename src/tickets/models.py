@@ -27,3 +27,8 @@ class Ticket(models.Model):
 
     def __str__(self):
         return self.organization_id.name
+
+    @property
+    def attached_file_url(self):
+        if self.attached_file and hasattr(self.attached_file, 'url'):
+            return self.attached_file.url

@@ -4,6 +4,7 @@
 {% block content %}
 
 <div style="float:right">
+    <a href='{% url "organizations:org_pdf" %}' class="btn btn-primary" style="margin-top:8px;" target="_blank">PDF Report</a> &nbsp;
     <a href='{% url "organizations:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Organization</a>
 </div>
 <nav aria-label="breadcrumb">
@@ -70,7 +71,7 @@
     {% endfor %}
     </tbody>
 </table>
-<div class="pagination">
+<div class="pagination ">
     <span class="step-links">
         {% if object_list.has_previous %}
             <a href="?page=1">&laquo; first</a>
