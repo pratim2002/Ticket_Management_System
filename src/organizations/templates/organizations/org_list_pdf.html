@@ -1,23 +1,31 @@
-{% extends "base.html" %}
 {% load static %}
-{% block head_title %} Organizations|{{ block.super }} {% endblock head_title %}
-{% block content %}
-
-<table class="table table-bordered table-hover">
+<html>
+<head>
+    <base href="{{ base_url }}"/>
+    <title>Organizations Report</title>
+    <link rel="stylesheet" href="{% static 'css/pdf.css' %}"/>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div>
+    <h1 class="text-center">Organizations</h1>
+</div>
+<table class="table table-striped">
     <thead>
     <tr>
-        <!--<th>S.N.</th>-->
-        <th>Name</th>
-        <th>Address</th>
-        <th>Phone</th>
-        <th>IT officer</th>
-        <th>Mobile</th>
+        <th>SN</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Amount</th>
     </tr>
     </thead>
     <tbody>
     {% for obj in object_list %}
     <tr>
-        <!--<td>{{ forloop.counter }}</td>-->
+        <td>{{ forloop.counter }}</td>
         <td> {{ obj }} </td>
         <td>{{ obj.address }}</td>
         <td>{{ obj.phone }}</td>
@@ -27,5 +35,6 @@
     {% endfor %}
     </tbody>
 </table>
-
-{% endblock %}
+<hr>
+</body>
+</html>

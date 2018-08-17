@@ -3,11 +3,11 @@
 {% block content %}
 
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
-    <li class="breadcrumb-item active"><a href="{% url 'tickets:list' %}">Tickets</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{{ object.organization_id }}</li>
-  </ol>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+        <li class="breadcrumb-item active"><a href="{% url 'tickets:list' %}">Tickets</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ object.organization_id }}</li>
+    </ol>
 </nav>
 <hr>
 
@@ -16,7 +16,7 @@
         <table class="table table-bordered table-hover">
             <tr>
                 <td>Organization Name</td>
-                <td> {{ object.organization_id }} </td>
+                <td> {{ object.organization_id }}</td>
             </tr>
             <tr>
                 <td>Ticket Type</td>
@@ -42,12 +42,14 @@
                 <td>Employee</td>
                 <td>{{ object.employee_id }}</td>
             </tr>
+            {% if object.attached_file %}
             <tr>
                 <td>Attached File</td>
                 <td><img src="{{ object.attached_file.url|default_if_none:'#' }}" width="120" height="100"> <br>
-                <a href="{{ object.attached_file.url }}"> View Full Size</a>
+                    <a href="{{ object.attached_file.url }}"> View Full Size</a>
                 </td>
             </tr>
+            {% endif %}
         </table>
     </div>
 </div>

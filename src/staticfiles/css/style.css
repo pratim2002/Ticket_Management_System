@@ -1,9 +1,7 @@
 .bg-light {
     background-color: #f94a12 !important;
 }
-.white {
-  color: white;
-}
+
 ol.breadcrumb {
     background:none !important;
 }
@@ -26,8 +24,29 @@ ol.breadcrumb {
 }
 .footer p{
   margin-bottom: 0px;
+  color: blue;
 }
 
 a {
     color: #0713ccf7;
+}
+
+.white {
+  color: white;
+}
+
+.blue{
+  color: white;
+}
+
+.green{
+    color:green
+}
+
+.yellow{
+background:blue;
+}
+
+.black{
+color:white;
 }

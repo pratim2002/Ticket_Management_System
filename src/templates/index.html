@@ -3,6 +3,45 @@
 {% block head_title %} Organizations|{{ block.super }} {% endblock head_title %}
 {% block content %}
 
-<h3>This is home page</h3>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <a href="{% url 'organizations:list' %}">
+            <div class="card text-center yellow">
+                <div class="card-body">
+                    <i class="fas fa-briefcase fa-8x blue"></i>
+                </div>
+                <div class="card-footer black">
+                    View Organizations
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'tickets:create' %}">
+            <div class="card text-center yellow">
+                <div class="card-body">
+                    <i class="fas fa-ticket-alt fa-8x blue"></i>
+                </div>
+                <div class="card-footer black">
+                    Generate Ticket
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'employees:list' %}">
+            <div class="card text-center yellow">
+                <div class="card-body">
+                    <i class="fas fa-users fa-8x blue"></i>
+                </div>
+                <div class="card-footer black">
+                    View Employee
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
 
 {% endblock %}

@@ -69,6 +69,7 @@ def pdf_generate_view(request, *args, **kwargs):
     template = get_template('organizations/org_list_pdf.html')
     context = {
         'object_list': queryset,
+        'base_url': 'http://localhost:8000'
     }
     html = template.render(context)
     pdf = render_to_pdf('organizations/org_list_pdf.html', context)
