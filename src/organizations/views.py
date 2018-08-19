@@ -2,12 +2,14 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template.loader import get_template
+from django.contrib.auth.decorators import login_required
 
 from .forms import CreateForm
 from .models import Organization
 from .utils import render_to_pdf
 # Create your views here.
 
+@login_required
 def listview(request):
     queryset_list = Organization.objects.all()
     paginator = Paginator(queryset_list, 10)
@@ -26,6 +28,7 @@ def listview(request):
     }
     return render(request, 'organizations/list.html', context)
 
+@login_required
 def createview(request):
     form = CreateForm(request.POST, request.FILES)
     errors = None
@@ -40,6 +43,7 @@ def createview(request):
     context = {"form" : form, "errors" : errors}
     return render(request, template_name, context)
 
+@login_required
 def editview(request, id=None):
     instance = get_object_or_404(Organization, id=id)
     form = CreateForm(request.POST or None, request.FILES or None, instance=instance)
@@ -55,15 +59,18 @@ def editview(request, id=None):
     context = {"form": form, "errors": errors}
     return render(request, template_name, context)
 
+@login_required
 def deleteview(request, id=None):
     instance = get_object_or_404(Organization, id=id)
     instance.delete()
     return redirect('organizations:list')
 
+@login_required
 def detailview(request, id=None):
     object = get_object_or_404(Organization, id=id)
     return render(request, 'organizations/detail.html', {'object': object})
 
+@login_required
 def pdf_generate_view(request, *args, **kwargs):
     queryset = Organization.objects.all()
     template = get_template('organizations/org_list_pdf.html')

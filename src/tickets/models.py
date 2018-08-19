@@ -7,6 +7,7 @@ TICKET_TYPE = (
         ('PROBLEM', 'Problem'),
         ('FEATURE REQUIRED', 'Feature Required'),
         ('SUGGESTION', 'Suggestion'),
+        ('OFFICIAL', 'Official'),
     )
 STATUS = (
     ('OPEN', 'Open'),

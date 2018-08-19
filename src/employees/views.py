@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 from .models import Employee
 from .forms import CreateForm
 # Create your views here.
 
+@login_required
 def listview(request):
     queryset = Employee.objects.all()
     context = {
@@ -12,6 +14,7 @@ def listview(request):
     }
     return render(request, 'employees/list.html', context)
 
+@login_required
 def createview(request):
     form = CreateForm(request.POST, request.FILES)
     errors = None
@@ -29,6 +32,7 @@ def createview(request):
     }
     return render(request, template_name, context)
 
+@login_required
 def editview(request, id=None):
     instance = get_object_or_404(Employee, id=id)
     form = CreateForm(request.POST or None, request.FILES or None, instance=instance)
@@ -47,6 +51,7 @@ def editview(request, id=None):
     }
     return render(request, template_name, context)
 
+@login_required
 def deleteview(request, id=None):
     instance = get_object_or_404(Employee, id=id)
     instance.delete()

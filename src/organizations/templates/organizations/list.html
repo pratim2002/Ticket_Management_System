@@ -24,6 +24,7 @@
         <th>Phone</th>
         <th>IT officer</th>
         <th>Mobile</th>
+        <th>Is active </th>
         <th>Action</th>
     </tr>
     </thead>
@@ -36,6 +37,7 @@
         <td>{{ obj.phone }}</td>
         <td>{{ obj.contact_person2 }}</td>
         <td>{{ obj.mobile2 }}</td>
+        <td>{{ obj.is_active }}</td>
         <td>
             <a href="{% url 'organizations:edit' obj.id %}">
                 <i class="fas fa-pen-square" title="edit"></i>

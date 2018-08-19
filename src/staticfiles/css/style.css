@@ -24,29 +24,24 @@ ol.breadcrumb {
 }
 .footer p{
   margin-bottom: 0px;
-  color: blue;
+  color: white;
 }
 
 a {
     color: #0713ccf7;
 }
 
-.white {
-  color: white;
-}
-
-.blue{
+.white{
   color: white;
 }
 
 .green{
-    color:green
+    background:#689F38;
 }
 
-.yellow{
+.blue{
 background:blue;
 }
 
-.black{
-color:white;
-}
+
+
