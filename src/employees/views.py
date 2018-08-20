@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 from .models import Employee
 from .forms import CreateForm
@@ -21,6 +22,12 @@ def createview(request):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
+        user = User()
+        user.first_name = instance.first_name
+        user.last_name = instance.last_name
+        user.username = "{}".format(instance.first_name)
+        user.set_password("{}{}".format(instance.last_name,instance.mobile))
+        user.save()
         return HttpResponseRedirect('/employees/')
     if form.errors:
         errors = form.errors

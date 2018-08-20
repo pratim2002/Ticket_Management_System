@@ -5,7 +5,9 @@ class CreateForm(forms.ModelForm):
     class Meta:
         model = Employee
         fields = [
-            'name',
+            'first_name',
+            'middle_name',
+            'last_name',
             'mobile',
             'email',
             'position',
@@ -13,7 +15,9 @@ class CreateForm(forms.ModelForm):
         ]
 
         widgets = {
-            'name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'name'}),
+            'first_name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'name'}),
+            'middle_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'name'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'name'}),
             'mobile' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'mobile number'}),
             'email' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'example@zeftware.com'}),
             'position' : forms.TextInput(attrs = {'class': 'form-control', 'placeholder' : 'position'}),

@@ -19,7 +19,7 @@
     <tr>
         <th>S.N.</th>
         <th>Name</th>
-        <th>Tumbnail</th>
+        <!--<th>Tumbnail</th>-->
         <th>Mobile</th>
         <th>Email</th>
         <th>Position</th>
@@ -30,8 +30,10 @@
     {% for obj in object_list %}
     <tr>
         <td>{{ forloop.counter }}</td>
-        <td> {{ obj }} </td>
+        <td> {{ obj.first_name }}  </td>
+        {% if picture %}
         <td><img src="{{ obj.picture.url }}" width="50" height="60"></td>
+        {% endif %}
         <td>{{ obj.mobile }}</td>
         <td>{{ obj.email }}</td>
         <td>{{ obj.position }}</td>
