@@ -10,16 +10,18 @@ class CreateForm(forms.ModelForm):
             'last_name',
             'mobile',
             'email',
+            'department',
             'position',
             'picture',
         ]
 
         widgets = {
-            'first_name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'name'}),
-            'middle_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'name'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'name'}),
+            'first_name' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'first name'}),
+            'middle_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'middle name'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'last name'}),
             'mobile' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'mobile number'}),
             'email' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'example@zeftware.com'}),
+            'department': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'department'}),
             'position' : forms.TextInput(attrs = {'class': 'form-control', 'placeholder' : 'position'}),
             'picture': forms.FileInput(attrs={'class': 'form-control'}),
         }

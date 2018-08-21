@@ -19,6 +19,7 @@
     <tr>
         <th>S.N.</th>
         <th>Organization Name</th>
+        <th>Contact</th>
         <th>Ticket Type</th>
         <th>Issue Date</th>
         <th>Completion Date</th>
@@ -32,6 +33,7 @@
     <tr>
         <td>{{ forloop.counter }}</td>
         <td><a href="{% url 'tickets:detail' obj.id %}">{{ obj.organization_id }}</a></td>
+        <td> {{ obj.organization_id.mobile2 }}</td>
         <td>{{ obj.ticket_type }}</td>
         <td>{{ obj.issue_date }}</td>
         <td>{{ obj.completion_date }}</td>

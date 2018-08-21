@@ -7,6 +7,7 @@ class Employee(models.Model):
     last_name   = models.CharField(max_length=254, null=True, blank=True)
     mobile      = models.CharField(max_length=254, null=True, blank=True)
     email       = models.EmailField(max_length=254, null=True, blank=True, unique=True)
+    department  = models.CharField(max_length=254, null=True, blank=True)
     position    = models.CharField(max_length=254, null=True, blank=True)
     picture     = models.ImageField(upload_to='profile_pic/', null=True, blank=True)
     created_at  = models.DateTimeField(auto_now_add = True)

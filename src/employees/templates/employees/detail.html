@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block head_title %} Employee Detail| {{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+        <li class="breadcrumb-item active">Employee</li>
+    </ol>
+</nav>
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        {% for emp in employees %}
+        <ol>
+            <a href="{% url 'employees:detail' emp.id %}">
+                {{ emp.first_name }}
+                {% if emp.middle_name %}
+                {{ emp.middle_name }}
+                {% endif %}
+                {{ emp.last_name }}
+            </a>
+        </ol>
+        {% endfor %}
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <img src="{{ object.picture.url|default_if_none:'#' }}" width="380" height="380"> <br>
+            </div>
+            <div class="card-footer">
+                <h4> {{ object.position }} </h4>
+                <h3>
+                    {{ object.first_name }}
+                    {% if object.middle_name %}
+                    {{ object.middle_name }}
+                    {% endif %}
+                    {{ object.last_name }}
+                </h3>
+                <h5><a href="# "> {{ object.email }} </a> </h5>
+                <h5> {{ object.mobile }} </h5>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

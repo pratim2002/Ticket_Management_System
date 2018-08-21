@@ -43,5 +43,18 @@ a {
 background:blue;
 }
 
+.required-field{
+color: #f00!important;
+font-size: 17px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.link-active {
+    font-weight: bold;
+}
+
 
 

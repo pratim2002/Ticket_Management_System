@@ -13,64 +13,85 @@
     </ol>
 </nav>
 <hr>
-
-<table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-        <th>S.N.</th>
-        <th>Name</th>
-        <!--<th>Tumbnail</th>-->
-        <th>Mobile</th>
-        <th>Email</th>
-        <th>Position</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for obj in object_list %}
-    <tr>
-        <td>{{ forloop.counter }}</td>
-        <td> {{ obj.first_name }}  </td>
-        {% if picture %}
-        <td><img src="{{ obj.picture.url }}" width="50" height="60"></td>
-        {% endif %}
-        <td>{{ obj.mobile }}</td>
-        <td>{{ obj.email }}</td>
-        <td>{{ obj.position }}</td>
-        <td>
-            <a href="{% url 'employees:edit' obj.id %}">
-                <i class="fas fa-pen-square" title="edit"></i>
-            </a> &nbsp;
-            <a href="{% url 'employees:delete' obj.id %}" data-toggle="modal" data-target="#obj-{{ obj.id }}">
-                <i class="far fa-trash-alt" title="delete"></i>
+<div class="row">
+    <div class="col-md-4">
+        {% for obj in object_list %}
+        <p>
+            <a href="{% url 'employees:detail' obj.id %}">
+                {{ obj.first_name }}
+                {% if obj.middle_name %}
+                {{ obj.middle_name }}
+                {% endif %}
+                {{ obj.last_name }}
             </a>
-            <!-- Modal -->
-            <div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"
-                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Are You Sure?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a href="{% url 'employees:delete' obj.id %}">
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+        </p>
+        {% endfor %}
+    </div>
+</div>
+<!--<table class="table table-bordered table-hover">-->
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th>S.N.</th>-->
+        <!--<th>Name</th>-->
+        <!--<th>Mobile</th>-->
+        <!--<th>Email</th>-->
+        <!--<th>Department</th>-->
+        <!--<th>Position</th>-->
+        <!--<th>Action</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--{% for obj in object_list %}-->
+    <!--<tr>-->
+        <!--<td>{{ forloop.counter }}</td>-->
+        <!--<td>-->
+            <!--<a href="{% url 'employees:detail' obj.id %}">-->
+                <!--{{ obj.first_name }}-->
+                <!--{% if obj.middle_name %}-->
+                <!--{{ obj.middle_name }}-->
+                <!--{% endif %}-->
+                <!--{{ obj.last_name }}-->
+            <!--</a>-->
+        <!--</td>-->
+        <!--<td>{{ obj.mobile }}</td>-->
+        <!--<td>{{ obj.email }}</td>-->
+        <!--<td>{{ obj.department }}</td>-->
+        <!--<td>{{ obj.position }}</td>-->
+        <!--<td>-->
+            <!--<a href="{% url 'employees:edit' obj.id %}">-->
+                <!--<i class="fas fa-pen-square" title="edit"></i>-->
+            <!--</a> &nbsp;-->
+            <!--<a href="{% url 'employees:delete' obj.id %}" data-toggle="modal" data-target="#obj-{{ obj.id }}">-->
+                <!--<i class="far fa-trash-alt" title="delete"></i>-->
+            <!--</a>-->
+            <!--&lt;!&ndash; Modal &ndash;&gt;-->
+            <!--<div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"-->
+                 <!--aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+                <!--<div class="modal-dialog" role="document">-->
+                    <!--<div class="modal-content">-->
+                        <!--<div class="modal-header">-->
+                            <!--<h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>-->
+                            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                                <!--<span aria-hidden="true">&times;</span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                        <!--<div class="modal-body">-->
+                            <!--Are You Sure?-->
+                        <!--</div>-->
+                        <!--<div class="modal-footer">-->
+                            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                            <!--<a href="{% url 'employees:delete' obj.id %}">-->
+                                <!--<button type="button" class="btn btn-danger">Delete</button>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</td>-->
+    <!--</tr>-->
+    <!--{% endfor %}-->
+    <!--</tbody>-->
+<!--</table>-->
+
 
 {% endblock %}

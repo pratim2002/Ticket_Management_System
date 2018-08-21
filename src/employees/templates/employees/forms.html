@@ -11,50 +11,56 @@
 </nav>
 <hr>
 
-<form method="POST" enctype="multipart/form-data" class="offset-md-4"> {% csrf_token %}
+<form method="POST" enctype="multipart/form-data" class="offset-md-3"> {% csrf_token %}
     <div class="form-group row">
-        <label class="col-md-1 col-form-label">{{ form.first_name.label }}</label>
+        <label class="col-md-2 col-form-label">{{ form.first_name.label }} <span class="required-field">*</span></label>
         <div class="col-md-6">
             {{ form.first_name }}
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-md-1 col-form-label">{{ form.middle_name.label }}</label>
+        <label class="col-md-2 col-form-label">{{ form.middle_name.label }}</label>
         <div class="col-md-6">
             {{ form.middle_name }}
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-md-1 col-form-label">{{ form.last_name.label }}</label>
+        <label class="col-md-2 col-form-label">{{ form.last_name.label }} <span class="required-field">*</span></label>
         <div class="col-md-6">
             {{ form.last_name }}
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-1 col-form-label">{{ form.mobile.label }}</label>
+        <label class="col-sm-2 col-form-label">{{ form.mobile.label }}</label>
         <div class="col-sm-6">
             {{ form.mobile}}
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-1 col-form-label">{{ form.email.label }}</label>
+        <label class="col-sm-2 col-form-label">{{ form.email.label }}</label>
         <div class="col-sm-6">
             {{ form.email }}
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-1 col-form-label">{{ form.position.label }}</label>
+        <label class="col-sm-2 col-form-label">{{ form.department.label }}</label>
+        <div class="col-sm-6">
+            {{ form.department }}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">{{ form.position.label }}</label>
         <div class="col-sm-6">
             {{ form.position }}
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-1 col-form-label">{{ form.picture.label }}</label>
+        <label class="col-sm-2 col-form-label">{{ form.picture.label }}</label>
         <div class="col-sm-6">
             {{ form.picture }}
         </div>
     </div>
-    <button type="submit" class="btn btn-primary offset-md-1">Add Employee</button>
+    <button type="submit" class="btn btn-primary offset-md-2">Add Employee</button>
 
 </form>
 

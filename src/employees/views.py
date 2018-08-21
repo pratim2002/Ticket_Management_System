@@ -63,3 +63,13 @@ def deleteview(request, id=None):
     instance = get_object_or_404(Employee, id=id)
     instance.delete()
     return redirect('employees:list')
+
+@login_required
+def detailview(request, id=None):
+    employees = Employee.objects.all()
+    object = get_object_or_404(Employee, id=id)
+    context = {
+        'employees': employees,
+        'object' : object
+    }
+    return render(request, 'employees/detail.html', context)
