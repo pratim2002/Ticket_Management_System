@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 from .models import Employee
 from .forms import CreateForm
@@ -9,11 +10,8 @@ from .forms import CreateForm
 
 @login_required
 def listview(request):
-    queryset = Employee.objects.all()
-    context = {
-        'object_list' : queryset
-    }
-    return render(request, 'employees/list.html', context)
+    employee = Employee.objects.first()
+    return redirect(reverse('employees:detail', kwargs={'id': employee.pk}))
 
 @login_required
 def createview(request):
@@ -25,8 +23,8 @@ def createview(request):
         user = User()
         user.first_name = instance.first_name
         user.last_name = instance.last_name
-        user.username = "{}".format(instance.first_name)
-        user.set_password("{}{}".format(instance.last_name,instance.mobile))
+        user.username = ("{}{}".format(instance.first_name,instance.pk))
+        user.set_password("{}{}".format(instance.first_name,'@Zeftware'))
         user.save()
         return HttpResponseRedirect('/employees/')
     if form.errors:
@@ -67,9 +65,9 @@ def deleteview(request, id=None):
 @login_required
 def detailview(request, id=None):
     employees = Employee.objects.all()
-    object = get_object_or_404(Employee, id=id)
+    employee = get_object_or_404(Employee, id=id)
     context = {
         'employees': employees,
-        'object' : object
+        'employee' : employee
     }
     return render(request, 'employees/detail.html', context)

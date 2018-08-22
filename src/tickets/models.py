@@ -2,6 +2,7 @@ from django.db import models
 
 from organizations.models import Organization
 from employees.models import Employee
+from products.models import Product
 # Create your models here.
 TICKET_TYPE = (
         ('PROBLEM', 'Problem'),
@@ -17,6 +18,7 @@ STATUS = (
 class Ticket(models.Model):
     organization_id = models.ForeignKey(Organization, on_delete=models.CASCADE)
     ticket_type     = models.CharField(max_length=40, choices=TICKET_TYPE)
+    product_id      = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     description     = models.TextField(max_length=400)
     issue_date      = models.DateField(auto_now_add=True, auto_now=False)
     completion_date = models.DateField(auto_now_add=False, auto_now=False)

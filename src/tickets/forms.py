@@ -8,6 +8,7 @@ class CreateForm(forms.ModelForm):
         fields = [
             'organization_id',
             'ticket_type',
+            'product_id',
             'description',
             'completion_date',
             'status',
@@ -17,6 +18,7 @@ class CreateForm(forms.ModelForm):
         widgets = {
             'organization_id': forms.Select(attrs={'class': 'form-control'}),
             'ticket_type': forms.Select(attrs={'class': 'form-control'}),
+            'product_id': forms.Select(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'description'}),
             'completion_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date', 'placeholder': 'completeion_date'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
