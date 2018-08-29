@@ -1,9 +1,12 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.models import User, AbstractBaseUser
+# from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.conf import settings
+# from django.contrib.auth.models import User
 from django.contrib.auth import password_validation
 
-class RegisterForm(UserCreationForm):
+from .models import User
+
+class RegisterForm(forms.ModelForm):
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class' : 'form-control' , 'placeholder':'Enter Password'}))
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput(attrs={'class' : 'form-control' , 'placeholder':'Confirm Password'}))
     class Meta:
@@ -22,7 +25,7 @@ class RegisterForm(UserCreationForm):
         }
 
 
-class LoginForm(AuthenticationForm):
+class LoginForm(forms.Form):
     """
         Form to login a user
         """

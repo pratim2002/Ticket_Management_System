@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
+    'employees',
+    'products',
     'organizations.apps.OrganizationsConfig',
     'tickets.apps.TicketsConfig',
     'django.contrib.admin',
@@ -39,9 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
-    'employees',
-    'products'
 ]
 
 MIDDLEWARE = [
@@ -81,14 +81,14 @@ WSGI_APPLICATION = 'ticket_ms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.postgresql',
-        'NAME'      : 'ticket',
+        'NAME'      : 'tickets',
         'USER'      : 'postgres',
         'PASSWORD'  : 'Neetyou2',
         'HOST'      : 'localhost',
     }
 }
 
-
+AUTH_USER_MODEL = 'users.User'
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 

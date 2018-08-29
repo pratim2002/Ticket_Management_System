@@ -11,18 +11,24 @@
 <hr>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
         <ol>
             {% for emp in employees %}
-            <li class="{% if employee.pk == emp.pk %}link-active{% endif %}">
-                <a href="{% url 'employees:detail' emp.id %}">
-                    {{ emp.first_name }}
-                    {% if emp.middle_name %}
-                    {{ emp.middle_name }}
-                    {% endif %}
-                    {{ emp.last_name }}
-                </a>
-            </li>
+            <table>
+                <tr>
+                    <td>
+                        <li class="{% if employee.pk == emp.pk %}link-active{% endif %}">
+                            <a href="{% url 'employees:detail' emp.id %}">
+                                {{ emp.first_name }}
+                                {% if emp.middle_name %}
+                                {{ emp.middle_name }}
+                                {% endif %}
+                                {{ emp.last_name }}
+                            </a>
+                        </li>
+                    </td>
+                </tr>
+            </table>
             {% endfor %}
         </ol>
     </div>
