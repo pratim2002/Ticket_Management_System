@@ -99,3 +99,20 @@ class PasswordChangeForm(forms.Form):
         if commit:
             self.user.save()
         return self.user
+
+
+class CreateForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = [
+            'email',
+            'username',
+            'first_name',
+            'last_name',
+        ]
+        widgets = {
+            'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'email'}),
+            'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'first name'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'last name'}),
+        }

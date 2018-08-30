@@ -42,9 +42,11 @@
             <a href="{% url 'organizations:edit' obj.id %}">
                 <i class="fas fa-pen-square" title="edit"></i>
             </a> &nbsp;
+            {% if user.is_admin %}
             <a href="{% url 'organizations:delete' obj.id %}" data-toggle="modal" data-target="#obj-{{ obj.id }}">
                 <i class="far fa-trash-alt" title="delete"></i>
             </a>
+            {% endif %}
             <!-- Modal -->
             <div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalLabel" aria-hidden="true">

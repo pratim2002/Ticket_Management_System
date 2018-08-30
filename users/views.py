@@ -1,11 +1,14 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
-from .forms import RegisterForm, LoginForm, PasswordChangeForm
+from users.decorators import admin_required
+from .forms import RegisterForm, LoginForm, PasswordChangeForm, CreateForm
+from .models import User
 # Create your views here.
+
 
 @login_required
 def index(request):
@@ -17,7 +20,8 @@ def index(request):
     elif user.is_admin():
         template = 'index.html'
     elif user.is_employee():
-        return HttpResponse('this is employee')
+        template = 'employee_dashboard.html'
+        # return HttpResponse('this is employee')
     return render(request, template, {})
 
 
@@ -72,6 +76,7 @@ def user_login(request):
 
     return render(request, 'users/login.html', context)
 
+
 @login_required
 def user_password_change(request):
     """
@@ -89,6 +94,7 @@ def user_password_change(request):
     }
     return render(request, 'users/change_password.html', context)
 
+
 def user_logout(request):
     """
     Logout a user
@@ -96,3 +102,31 @@ def user_logout(request):
     logout(request)
     messages.success(request, "Logged out successfully!")
     return redirect('users:login')
+
+
+@login_required
+@admin_required
+def user_listview(request):
+    users = User.objects.all()
+    context = {
+        'users': users
+    }
+    return render(request, 'users/user_list.html', context)
+
+
+@login_required
+@admin_required
+def user_editview(request, id=None):
+    instance = get_object_or_404(User, id=id)
+    form = CreateForm(request.POST or None, instance=instance)
+    errors = None
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        return HttpResponseRedirect('/users/')
+    if form.errors:
+        errors = form.errors
+
+    template_name = 'users/form.html'
+    context = {"form": form, "errors": errors}
+    return render(request, template_name, context)

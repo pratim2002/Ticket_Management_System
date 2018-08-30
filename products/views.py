@@ -2,10 +2,13 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
+from users.decorators import admin_required
 from .models import Product
 from .forms import CreateForm
 
 # Create your views here.
+
+
 @login_required
 def product_listview(request):
     queryset = Product.objects.all()
@@ -14,7 +17,9 @@ def product_listview(request):
     }
     return render(request, 'products/list.html', context)
 
+
 @login_required
+@admin_required
 def product_createview(request):
     form = CreateForm(request.POST or None)
     errors = None
@@ -32,7 +37,9 @@ def product_createview(request):
     }
     return render(request, template_name, context)
 
+
 @login_required
+@admin_required
 def product_editview(request, id=None):
     instance = get_object_or_404(Product, id=id)
     form = CreateForm(request.POST or None, instance=instance)
@@ -48,7 +55,9 @@ def product_editview(request, id=None):
     context = {"form": form, "errors": errors}
     return render(request, template_name, context)
 
+
 @login_required
+@admin_required
 def product_deleteview(request, id=None):
     instance = get_object_or_404(Product, id=id)
     instance.delete()

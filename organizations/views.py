@@ -4,6 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template.loader import get_template
 from django.contrib.auth.decorators import login_required
 
+from users.decorators import admin_required
 from .forms import CreateForm
 from .models import Organization
 from .utils import render_to_pdf
@@ -60,6 +61,7 @@ def editview(request, id=None):
     return render(request, template_name, context)
 
 @login_required
+@admin_required
 def deleteview(request, id=None):
     instance = get_object_or_404(Organization, id=id)
     instance.delete()

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %} Products|{{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Users</a></li>
+    </ol>
+</nav>
+<hr>
+
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>S.N.</th>
+        <th>Name</th>
+        <th>username</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ user.first_name }} {{ user.last_name }}</td>
+        <td> {{ user.username }} </td>
+        <td>
+            <a href="{% url 'users:edit' user.id %}">
+                <i class="fas fa-pen-square" title="edit"></i>
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

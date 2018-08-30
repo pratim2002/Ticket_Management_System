@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %} Organizations|{{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<br>
+<div class="row">
+    <div class="col-md-3">
+        <a href="{% url 'organizations:list' %}">
+            <div class="card text-center blue">
+                <div class="card-body">
+                    <i class="fas fa-briefcase fa-8x white"></i>
+                </div>
+                <div class="card-footer white">
+                    Organizations
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="{% url 'employees:list' %}">
+            <div class="card text-center green">
+                <div class="card-body">
+                    <i class="fas fa-users fa-8x white"></i>
+                </div>
+                <div class="card-footer white">
+                    Employees
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="{% url 'products:list' %}">
+            <div class="card text-center blue">
+                <div class="card-body">
+                    <i class="fab fa-palfed fa-8x white"></i>
+                </div>
+                <div class="card-footer white">
+                    Products
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="{% url 'tickets:create' %}">
+            <div class="card text-center green">
+                <div class="card-body">
+                    <i class="fas fa-ticket-alt fa-8x white"></i>
+                </div>
+                <div class="card-footer white">
+                    Generate Ticket
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+{% endblock %}

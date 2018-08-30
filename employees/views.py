@@ -11,7 +11,11 @@ from .forms import CreateForm
 @login_required
 def listview(request):
     employee = Employee.objects.first()
-    return redirect(reverse('employees:detail', kwargs={'id': employee.pk}))
+    emp_count = Employee.objects.count()
+    if emp_count == 0:
+        return HttpResponseRedirect('/employees/add/')
+    else:
+        return redirect(reverse('employees:detail', kwargs={'id': employee.pk}))
 
 @login_required
 def createview(request):
