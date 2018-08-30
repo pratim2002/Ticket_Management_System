@@ -35,7 +35,9 @@
     <div class="col-md-3">
         <div class="card text-center">
             <div class="card-body">
+                {% if employee.picture %}
                 <img src="{{ employee.picture.url|default_if_none:'#' }}" width="300" height="300"> <br>
+                {% endif %}
             </div>
             <div class="card-footer">
                 <h4> {{ employee.position }} </h4>

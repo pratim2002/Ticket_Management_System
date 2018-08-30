@@ -22,10 +22,8 @@
     {% if user.is_authenticated %}
     {% if user.is_admin %}
     {% include 'includes/partial_admin_menu.html' %}
-    {% elif user.is_staff %}
+    {% elif user.is_employee %}
     {% include 'includes/partial_employee_menu.html' %}
-    {% elif user.is_active %}
-    {% include 'includes/partial_index_menu.html' %}
     {% endif %}
     {% else %}
     {% include 'includes/partial_home_menu.html' %}

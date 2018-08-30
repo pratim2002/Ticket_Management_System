@@ -1,9 +1,5 @@
 from django import forms
-# from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.conf import settings
-# from django.contrib.auth.models import User
 from django.contrib.auth import password_validation
-
 from .models import User
 
 class RegisterForm(forms.ModelForm):
@@ -39,6 +35,22 @@ class LoginForm(forms.Form):
         widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter your password'}),
         strip=False,
     )
+
+    def clean_username(self):
+        username = self.cleaned_data.get('username')
+
+        try:
+            user = User.objects.get(email=username)
+        except User.DoesNotExist:
+            try:
+                user = User.objects.get(username=username)
+            except User.DoesNotExist:
+                user = None
+
+        if user:
+            return user.email
+        return None
+
 
 class PasswordChangeForm(forms.Form):
     """

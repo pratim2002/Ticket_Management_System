@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -8,7 +9,17 @@ from .forms import RegisterForm, LoginForm, PasswordChangeForm
 
 @login_required
 def index(request):
-    return render(request, 'index.html')
+    user = request.user
+    template = 'users/login.html'
+
+    if user.is_anonymous:
+        template = 'users/login.html'
+    elif user.is_admin():
+        template = 'index.html'
+    elif user.is_employee():
+        return HttpResponse('this is employee')
+    return render(request, template, {})
+
 
 def register(request):
     if request.method == 'POST':
@@ -25,16 +36,17 @@ def register(request):
     else:
         form = RegisterForm()
 
-    context = { 'form' : form}
+    context = {'form': form}
     return render(request, 'users/register.html', context  )
+
 
 def user_login(request):
     """
     Login a user
     """
     next = request.GET.get('next', None)
-    # if request.user.is_authenticated():
-    #     return redirect('index')
+    if request.user.is_authenticated:
+        return redirect('users:index')
 
     form = LoginForm(data=request.POST or None)
 
@@ -55,6 +67,7 @@ def user_login(request):
                 login(request, user)
                 if next:
                     return redirect(next)
+                messages.info(request, 'Sussecfully logged in')
                 return redirect('users:index')
 
     return render(request, 'users/login.html', context)
