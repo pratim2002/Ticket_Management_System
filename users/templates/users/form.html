@@ -2,6 +2,12 @@
 {% block head_title %} {{ title }} | {{ block.super }} {% endblock head_title %}
 {% block content %}
 
+<!--<div style="float:right">&nbsp;-->
+    <!--{% for user in users %}-->
+    <!--<a href='#' class="btn btn-primary" style="margin-top:8px;">Change Password</a>-->
+    <!--{% endfor %}-->
+<!--</div>-->
+
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>

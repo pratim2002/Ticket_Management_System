@@ -4,7 +4,9 @@
 {% block content %}
 
 <div style="float:right">&nbsp;
+    {% if user.is_admin %}
     <a href='{% url "products:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Pdoduct</a>
+    {% endif %}
 </div>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -20,7 +22,9 @@
         <th>S.N.</th>
         <th>Name</th>
         <th>Description</th>
+        {% if user.is_admin %}
         <th>Action</th>
+        {% endif %}
     </tr>
     </thead>
     <tbody>
@@ -29,6 +33,7 @@
         <td>{{ forloop.counter }}</td>
         <td> {{ obj }} </td>
         <td>{{ obj.description }}</td>
+        {% if user.is_admin %}
         <td>
             <a href="{% url 'products:edit' obj.id %}">
                 <i class="fas fa-pen-square" title="edit"></i>
@@ -60,6 +65,7 @@
                 </div>
             </div>
         </td>
+        {% endif %}
     </tr>
     {% endfor %}
     </tbody>

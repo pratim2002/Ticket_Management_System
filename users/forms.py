@@ -112,12 +112,12 @@ class CreateForm(forms.ModelForm):
             'username',
             'first_name',
             'last_name',
-            'role'
+            'role',
         ]
         widgets = {
             'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'email'}),
             'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}),
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'first name'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'last name'}),
-            'role': forms.TextInput(attrs={'class': 'form-control'}),
+            'role': forms.Select(attrs={'class': 'form-control'}),
         }

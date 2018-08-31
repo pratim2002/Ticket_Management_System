@@ -3,7 +3,9 @@
 {% block content %}
 
 <div style="float:right">
+    {% if user.is_admin %}
     <a href='{% url "employees:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Employee</a>
+    {% endif %}
 </div>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -20,7 +22,9 @@
             <tr>
                 <th>S.N.</th>
                 <th>Name</th>
+                {% if user.is_admin %}
                 <th>Action</th>
+                {% endif %}
             </tr>
             </thead>
             <tbody>
@@ -36,6 +40,7 @@
                         {{ emp.last_name }}
                     </a>
                 </td>
+                {% if user.is_admin %}
                 <td>
                     <a href="{% url 'employees:edit' emp.id %}">
                         <i class="fas fa-pen-square" title="edit"></i>
@@ -69,6 +74,7 @@
                         </div>
                     </div>
                 </td>
+                {% endif %}
             </tr>
             {% endfor %}
             </tbody>

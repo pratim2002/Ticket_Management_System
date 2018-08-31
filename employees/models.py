@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Employee(models.Model):
+    class Meta:
+        ordering = ['first_name']
     first_name  = models.CharField(max_length=254)
     middle_name = models.CharField(max_length=254, null=True, blank=True)
     last_name   = models.CharField(max_length=254, null=True, blank=True)

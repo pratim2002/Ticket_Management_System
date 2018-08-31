@@ -21,7 +21,6 @@ def index(request):
         template = 'index.html'
     elif user.is_employee():
         template = 'employee_dashboard.html'
-        # return HttpResponse('this is employee')
     return render(request, template, {})
 
 
@@ -159,3 +158,19 @@ def user_createview(request):
 
     context = {'form': form}
     return render(request, 'users/forms.html', context)
+
+
+# @login_required
+# @admin_required
+# def users_pass_change(request, id=None):
+#     instance = get_object_or_404(User, id=id)
+#     form = PasswordChangeForm(data=request.POST or None, instance=instance)
+#     if request.method == 'POST':
+#         if form.is_valid():
+#             form.save()
+#             return redirect('users:list')
+#
+#     context = {
+#         'form': form
+#     }
+#     return render(request, 'users/users_pass_change.html', context)

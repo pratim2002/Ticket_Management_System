@@ -30,6 +30,7 @@ def listview(request):
     return render(request, 'organizations/list.html', context)
 
 @login_required
+@admin_required
 def createview(request):
     form = CreateForm(request.POST, request.FILES)
     errors = None
