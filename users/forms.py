@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth import password_validation
 from .models import User
 
+
 class RegisterForm(forms.ModelForm):
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class' : 'form-control' , 'placeholder':'Enter Password'}))
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput(attrs={'class' : 'form-control' , 'placeholder':'Confirm Password'}))
@@ -12,12 +13,14 @@ class RegisterForm(forms.ModelForm):
             'first_name',
             'last_name',
             'email',
+            'role',
         ]
         widgets = {
             'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}),
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'first name'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'last name'}),
             'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'email'}),
+            'role': forms.Select(attrs={'class': 'form-control'}),
         }
 
 
@@ -109,10 +112,12 @@ class CreateForm(forms.ModelForm):
             'username',
             'first_name',
             'last_name',
+            'role'
         ]
         widgets = {
             'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'email'}),
             'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}),
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'first name'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'last name'}),
+            'role': forms.TextInput(attrs={'class': 'form-control'}),
         }

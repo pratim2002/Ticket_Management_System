@@ -40,31 +40,32 @@ class UserManager(BaseUserManager):
 
         return user
 
+
 class User(AbstractBaseUser):
     """
     User Model
     """
-    username    = models.CharField(
+    username = models.CharField(
         max_length=254,
         unique=True,
         validators=[UsernameValidator()],
         error_messages={
-            'unique':'User with this username already exists.',
+            'unique': 'User with this username already exists.',
         },
     )
     email = models.EmailField (
         unique=True,
         error_messages={
-            'unique':'Email already exist'
+            'unique': 'Email already exist'
         }
     )
 
-    first_name  = models.CharField(max_length=254, blank=True, null= True)
-    last_name   = models.CharField(max_length=254, blank=True, null=True)
-    is_active   = models.BooleanField(default=True)
-    role        = models.CharField(max_length=254, choices=USER_ROLES, default=USER_ROLES.admin)
-    created_at  = models.DateTimeField(auto_now_add=True)
-    updated_at  = models.DateTimeField(auto_now=True)
+    first_name = models.CharField(max_length=254, blank=True, null=True)
+    last_name = models.CharField(max_length=254, blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+    role = models.CharField(max_length=254, choices=USER_ROLES, default=USER_ROLES.admin)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     objects = UserManager()
 

@@ -41,7 +41,7 @@ def register(request):
         form = RegisterForm()
 
     context = {'form': form}
-    return render(request, 'users/register.html', context  )
+    return render(request, 'users/register.html', context)
 
 
 def user_login(request):
@@ -130,3 +130,32 @@ def user_editview(request, id=None):
     template_name = 'users/form.html'
     context = {"form": form, "errors": errors}
     return render(request, template_name, context)
+
+
+@login_required
+@admin_required
+def user_deleteview(request, id=None):
+    instance = get_object_or_404(User, id=id)
+    instance.delete()
+    return redirect('users:list')
+
+
+@login_required
+@admin_required
+def user_createview(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('users:list')
+
+    else:
+        form = RegisterForm()
+
+    context = {'form': form}
+    return render(request, 'users/forms.html', context)

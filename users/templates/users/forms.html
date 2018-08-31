@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-{% block head_title %} {{ title }} | {{ block.super }} {% endblock head_title %}
+{% load static %}
+{% block head_title %} Signup {% endblock head_title %}
 {% block content %}
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
-        <li class="breadcrumb-item active"><a href="{% url 'users:list' %}">Users </a></li>
-        <li class="breadcrumb-item active" aria-current="page">Edit User</li>
+        <li class="breadcrumb-item active"><a href="{% url 'products:list' %}">Prducts </a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Product</li>
     </ol>
 </nav>
 <hr>
@@ -38,12 +39,24 @@
         </div>
     </div>
     <div class="form-group row">
+        <label class="col-sm-2 col-form-label">{{ form.password1.label }} <span class="required-field">*</span> </label>
+        <div class="col-sm-6">
+            {{ form.password1}}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">{{ form.password2.label }} <span class="required-field">*</span> </label>
+        <div class="col-sm-6">
+            {{ form.password2 }}
+        </div>
+    </div>
+    <div class="form-group row">
         <label class="col-sm-2 col-form-label">{{ form.role.label }} <span class="required-field">*</span> </label>
         <div class="col-sm-6">
             {{ form.role }}
         </div>
     </div>
-    <button type="submit" class="btn btn-primary offset-md-2">Update</button>
-</form>
 
+    <button type="submit" class="btn btn-primary offset-md-2">Add User</button>
+</form>
 {% endblock %}
