@@ -16,4 +16,7 @@ class Employee(models.Model):
     updated_at  = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return self.first_name
+        full_name = self.first_name + ' ' + self.last_name
+        if self.middle_name:
+            full_name = self.first_name + ' ' + self.middle_name + ' ' + self.last_name
+        return full_name
