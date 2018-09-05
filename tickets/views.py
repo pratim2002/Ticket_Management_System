@@ -2,17 +2,27 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
+from users.decorators import admin_required
 from .models import Ticket
 from .forms import CreateForm
+
+
 # Create your views here.
 
 @login_required
 def listview(request):
     queryset = Ticket.objects.all()
+
+    template1 = 'tickets/list.html'
+    template2 = 'tickets/ticket_for_emp.html'
     context = {
-        'object_list' : queryset
+        'object_list': queryset
     }
-    return render(request, 'tickets/list.html', context)
+    if request.user.is_employee():
+        return render(request, template2, context)
+
+    return render(request, template1, context)
+
 
 @login_required
 def createview(request):
@@ -26,8 +36,9 @@ def createview(request):
         errors = form.errors
 
     template_name = 'tickets/forms.html'
-    context = {"form" : form, "errors" : errors}
+    context = {"form": form, "errors": errors}
     return render(request, template_name, context)
+
 
 @login_required
 def editview(request, id=None):
@@ -45,11 +56,14 @@ def editview(request, id=None):
     context = {"form": form, "errors": errors}
     return render(request, template_name, context)
 
+
 @login_required
+@admin_required
 def deleteview(request, id=None):
     instance = get_object_or_404(Ticket, id=id)
     instance.delete()
     return redirect('tickets:list')
+
 
 @login_required
 def detailview(request, id=None):

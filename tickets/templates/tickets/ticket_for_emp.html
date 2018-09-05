@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %} Tickets|{{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<div style="float:right">
+    <a href='{% url "tickets:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Ticket</a>
+</div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Tickets List</a></li>
+    </ol>
+</nav>
+<hr>
+
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>S.N.</th>
+        <th>Organization Name</th>
+        <th>Contact</th>
+        <th>Product</th>
+        <th>Ticket Type</th>
+        <th>Issue Date</th>
+        <th>Completion Date</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in object_list %}
+    {% if request.user.email == obj.employee_id.email %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td><a href="{% url 'tickets:detail' obj.id %}">{{ obj.organization_id }}</a></td>
+        <td> {{ obj.organization_id.mobile2 }}</td>
+        <td> {{ obj.product_id }} </td>
+        <td>{{ obj.ticket_type }}</td>
+        <td>{{ obj.issue_date }}</td>
+        <td>{{ obj.completion_date }}</td>
+        <td>{{ obj.status }}</td>
+        <td>
+            <a href="{% url 'tickets:edit' obj.id %}">
+                <i class="fas fa-pen-square" title="edit"></i>
+            </a> &nbsp;
+        </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
