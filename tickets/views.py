@@ -1,7 +1,9 @@
+from django.core.mail import send_mail
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
+from ticket_ms import settings
 from users.decorators import admin_required
 from .models import Ticket
 from .forms import CreateForm
@@ -30,13 +32,26 @@ def createview(request):
     errors = None
     if form.is_valid():
         instance = form.save(commit=False)
+        email_id = instance.employee_id.email
+
         instance.save()
+
+        subject = 'Mail Testing'
+        message = 'Zeftware Solutions Generate Tickets for you. Please login and see the ticke.'
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = [email_id]
+
+        send_mail(subject, message, email_from, recipient_list, fail_silently=False)
+
         return HttpResponseRedirect("/tickets/")
     if form.errors:
         errors = form.errors
 
     template_name = 'tickets/forms.html'
-    context = {"form": form, "errors": errors}
+    context = {
+        "form": form,
+        "errors": errors
+    }
     return render(request, template_name, context)
 
 
