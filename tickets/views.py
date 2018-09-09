@@ -37,7 +37,7 @@ def createview(request):
         instance.save()
 
         subject = 'Mail Testing'
-        message = 'Zeftware Solutions Generate Tickets for you. Please login and see the ticke.'
+        message = 'Zeftware Solutions Generate Tickets for you. Please login and see the ticket.'
         email_from = settings.EMAIL_HOST_USER
         recipient_list = [email_id]
 

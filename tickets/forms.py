@@ -20,7 +20,7 @@ class CreateForm(forms.ModelForm):
             'ticket_type': forms.Select(attrs={'class': 'form-control'}),
             'product_id': forms.Select(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'description'}),
-            'completion_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date', 'placeholder': 'completeion_date'}),
+            'completion_date': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'completeion_date'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
             'employee_id': forms.Select(attrs={'class': 'form-control'}),
             'attached_file': forms.FileInput(attrs={'class': 'form-control' }),

@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -10,9 +11,20 @@ from .models import Organization
 from .utils import render_to_pdf
 # Create your views here.
 
+
 @login_required
 def listview(request):
     queryset_list = Organization.objects.all()
+
+    query = request.GET.get("q")
+    if query:
+        queryset_list = queryset_list.filter(
+            Q(name__icontains=query) |
+            Q(address__icontains=query) |
+            Q(contact_person1__icontains=query) |
+            Q(contact_person2__icontains=query)
+        ).distinct()
+
     paginator = Paginator(queryset_list, 10)
 
     page = request.GET.get('page')
@@ -28,6 +40,7 @@ def listview(request):
         'object_list' : queryset,
     }
     return render(request, 'organizations/list.html', context)
+
 
 @login_required
 @admin_required
@@ -45,6 +58,7 @@ def createview(request):
     context = {"form" : form, "errors" : errors}
     return render(request, template_name, context)
 
+
 @login_required
 def editview(request, id=None):
     instance = get_object_or_404(Organization, id=id)
@@ -61,6 +75,7 @@ def editview(request, id=None):
     context = {"form": form, "errors": errors}
     return render(request, template_name, context)
 
+
 @login_required
 @admin_required
 def deleteview(request, id=None):
@@ -68,10 +83,12 @@ def deleteview(request, id=None):
     instance.delete()
     return redirect('organizations:list')
 
+
 @login_required
 def detailview(request, id=None):
     object = get_object_or_404(Organization, id=id)
     return render(request, 'organizations/detail.html', {'object': object})
+
 
 @login_required
 def pdf_generate_view(request, *args, **kwargs):

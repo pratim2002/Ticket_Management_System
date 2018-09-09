@@ -4,7 +4,8 @@
 {% block content %}
 
 <div style="float:right">
-    <a href='{% url "organizations:org_pdf" %}' class="btn btn-primary" style="margin-top:8px;" target="_blank">PDF Report</a> &nbsp;
+    <a href='{% url "organizations:org_pdf" %}' class="btn btn-primary" style="margin-top:8px;" target="_blank">PDF
+        Report</a> &nbsp;
     {% if user.is_admin %}
     <a href='{% url "organizations:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Organization</a>
     {% endif %}
@@ -12,10 +13,24 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Organization List</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'organizations:list' %}"> Organization
+            List</a></li>
     </ol>
 </nav>
 <hr>
+
+<form method="GET" action="">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <input type="text" class="form-control" name="q" placeholder="Search Organization"
+                   value="{{ request.GET.q }}">
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Search" class="btn btn-success">
+        </div>
+    </div>
+</form>
+<br>
 
 <table class="table table-bordered table-hover">
     <thead>
@@ -26,7 +41,7 @@
         <th>Phone</th>
         <th>IT officer</th>
         <th>Mobile</th>
-        <th>Is active </th>
+        <th>Is active</th>
         <th>Action</th>
     </tr>
     </thead>
