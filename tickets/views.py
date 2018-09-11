@@ -1,4 +1,5 @@
 from django.core.mail import send_mail
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
@@ -14,6 +15,13 @@ from .forms import CreateForm
 @login_required
 def listview(request):
     queryset = Ticket.objects.all()
+
+    query = request.GET.get("q")
+    if query:
+        queryset = queryset.filter(
+            Q(ticket_type__icontains=query) |
+            Q(status__icontains=query)
+        )
 
     template1 = 'tickets/list.html'
     template2 = 'tickets/ticket_for_emp.html'
