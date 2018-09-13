@@ -2,6 +2,7 @@ from django import forms
 
 from .models import Organization
 
+
 class CreateForm(forms.ModelForm):
     class Meta:
         model = Organization

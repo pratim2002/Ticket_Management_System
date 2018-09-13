@@ -1,0 +1,31 @@
+{% extends "pdf_base.html" %}
+
+{% block content %}
+
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>S.N.</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>IT officer</th>
+        <th>Mobile</th>
+        <th>Is active</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in object_pdf_list %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td> {{ obj }} </td>
+        <td>{{ obj.address }}</td>
+        <td>{{ obj.phone }}</td>
+        <td>{{ obj.contact_person2 }}</td>
+        <td>{{ obj.mobile2 }}</td>
+        <td>{{ obj.is_active }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

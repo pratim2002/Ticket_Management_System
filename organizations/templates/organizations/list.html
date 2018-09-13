@@ -4,7 +4,7 @@
 {% block content %}
 
 <div style="float:right">
-    <a href='{% url "organizations:org_pdf" %}' class="btn btn-primary" style="margin-top:8px;" target="_blank">PDF
+    <a href='{% url "organizations:list" %}?&output=pdf' class="btn btn-primary" style="margin-top:8px;" target="_blank">PDF
         Report</a> &nbsp;
     {% if user.is_admin %}
     <a href='{% url "organizations:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Organization</a>

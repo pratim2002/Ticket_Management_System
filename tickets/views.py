@@ -28,10 +28,10 @@ def listview(request):
     context = {
         'object_list': queryset
     }
-    if request.user.is_employee():
-        return render(request, template2, context)
+    if request.user.is_admin():
+        return render(request, template1, context)
 
-    return render(request, template1, context)
+    return render(request, template2, context)
 
 
 @login_required

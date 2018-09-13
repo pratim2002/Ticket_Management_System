@@ -11,6 +11,8 @@ USER_ROLES = Choices(
 )
 
 # Create your models here.
+
+
 class UserManager(BaseUserManager):
 
     def create_user(self, email, password=None, **kwargs):

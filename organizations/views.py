@@ -2,18 +2,21 @@ from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.template.loader import get_template
 from django.contrib.auth.decorators import login_required
 
 from users.decorators import admin_required
 from .forms import CreateForm
 from .models import Organization
-from .utils import render_to_pdf
+# from .utils import render_to_pdf
+from ticket_ms.utils import render_pdf
 # Create your views here.
 
 
 @login_required
 def listview(request):
+
+    output = request.GET.get("output", "")
+
     queryset_list = Organization.objects.all()
 
     query = request.GET.get("q")
@@ -38,7 +41,12 @@ def listview(request):
 
     context = {
         'object_list' : queryset,
+        'object_pdf_list' : queryset_list,
     }
+
+    if output == "pdf":
+        return render_pdf('organizations/list_pdf.html', context, filename='org.pdf')
+
     return render(request, 'organizations/list.html', context)
 
 
@@ -90,16 +98,16 @@ def detailview(request, id=None):
     return render(request, 'organizations/detail.html', {'object': object})
 
 
-@login_required
-def pdf_generate_view(request, *args, **kwargs):
-    queryset = Organization.objects.all()
-    template = get_template('organizations/org_list_pdf.html')
-    context = {
-        'object_list': queryset,
-        'base_url': 'http://localhost:8000'
-    }
-    html = template.render(context)
-    pdf = render_to_pdf('organizations/org_list_pdf.html', context)
-    # return HttpResponse(pdf, content_type='application/pdf')
-    return pdf
+# @login_required
+# def pdf_generate_view(request, *args, **kwargs):
+#     queryset = Organization.objects.all()
+#     template = get_template('organizations/org_list_pdf.html')
+#     context = {
+#         'object_list': queryset,
+#         'base_url': 'http://localhost:8000'
+#     }
+#     html = template.render(context)
+#     pdf = render_to_pdf('organizations/org_list_pdf.html', context)
+#     # return HttpResponse(pdf, content_type='application/pdf')
+#     return pdf
 
