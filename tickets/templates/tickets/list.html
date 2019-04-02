@@ -3,91 +3,169 @@
 {% block head_title %} Tickets|{{ block.super }} {% endblock head_title %}
 {% block content %}
 
-<div style="float:right">
-    <a href='{% url "tickets:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Ticket</a>
-</div>
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'tickets:list' %}"> Tickets List</a></li>
-    </ol>
-</nav>
-<hr>
-
-<form method="GET" action="">
-    <div class="row">
-        <div class="col-md-4 offset-md-4">
-            <input type="text" class="form-control" name="q" placeholder="Search Ticket"
-                   value="{{ request.GET.q }}">
-        </div>
-        <div class="col-md-1">
-            <input type="submit" value="Search" class="btn btn-success">
-        </div>
+    <div style="float:right">
+        <a href='{% url "tickets:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Record</a>
     </div>
-</form>
-<br>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> Records</li>
+        </ol>
+    </nav>
+    <hr>
+    <div class="container">
+        <form method="get">
+            <div class="form-group row">
+                <div class="col-md-3">
+                    {{ filter.form.username }}
+                </div>
+                <div class="col-md-3">
+                    {{ filter.form.date }}
+                </div>
 
-<table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-        <th>S.N.</th>
-        <th>Organization Name</th>
-        <th>Contact</th>
-        <th>Product</th>
-        <th>Ticket Type</th>
-        <th>Issue Date</th>
-        <th>Completion Date</th>
-        <th>Status</th>
-        <th>Employee</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for obj in object_list %}
-    <tr>
-        <td>{{ forloop.counter }}</td>
-        <td><a href="{% url 'tickets:detail' obj.id %}">{{ obj.organization_id }}</a></td>
-        <td> {{ obj.organization_id.mobile2 }}</td>
-        <td> {{ obj.product_id }} </td>
-        <td>{{ obj.ticket_type }}</td>
-        <td>{{ obj.issue_date }}</td>
-        <td>{{ obj.completion_date }}</td>
-        <td>{{ obj.status }}</td>
-        <td>{{ obj.employee_id }}</td>
-        <td>
-            <a href="{% url 'tickets:edit' obj.id %}">
-                <i class="fas fa-pen-square" title="edit"></i>
-            </a> &nbsp;
-            <a href="{% url 'tickets:delete' obj.id %}" data-toggle="modal" data-target="#obj-{{ obj.id }}">
-                <i class="far fa-trash-alt" title="delete"></i>
-            </a>
-            <!-- Modal -->
-            <div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"
-                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Are You Sure?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a href="{% url 'tickets:delete' obj.id %}">
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </a>
-                        </div>
-                    </div>
+                <div class="col-md-5">
+                    {{ filter.form.problem_domain }}
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    {{ filter.form.branch }}
+                </div>
+                <div class="col-md-3">
+                    {{ filter.form.source }}
+                </div>
+                <div class="col-md-3">
+                    {{ filter.form.status }}
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success form-control">Filter</button>
                 </div>
             </div>
-        </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+        </form>
+    </div>
+    {#    <form method="GET" action="" class="offset-md-0">#}
+    {#        <div class="form-group row">#}
+    {#            <div class="col-md-3">#}
+    {#                <select name="source" class="form-control">#}
+    {#                    <option value="">Select Source</option>#}
+    {#                    <option value="Call_in" {% if source_filter == "Call_in" %} selected="selected" {% endif %}>Call#}
+    {#                        In#}
+    {#                    </option>#}
+    {#                    <option value="Call_out" {% if source_filter == "Call_out" %} selected="selected" {% endif %}>Call#}
+    {#                        Out#}
+    {#                    </option>#}
+    {#                    <option value="CUG" {% if source_filter == "CUG" %} selected="selected" {% endif %}>CUG</option>#}
+    {#                    <option value="Viber" {% if source_filter == "Viber" %} selected="selected" {% endif %}>Viber#}
+    {#                    </option>#}
+    {#                    <option value="Skype" {% if source_filter == "Skype" %} selected="selected" {% endif %}>Skype#}
+    {#                    </option>#}
+    {#                    <option value="Message" {% if source_filter == "Message" %} selected="selected" {% endif %}>#}
+    {#                        Message#}
+    {#                    </option>#}
+    {#                </select>#}
+    {#            </div>#}
+    {#            <div class="col-md-3">#}
+    {#                <select name="status" class="form-control">#}
+    {#                    <option value="">Select Status</option>#}
+    {#                    <option value="Open" {% if status_filter == "Open" %} selected="selected" {% endif %}>Open</option>#}
+    {#                    <option value="Close" {% if status_filter == "Close" %} selected="selected" {% endif %}>Close#}
+    {#                    </option>#}
+    {#                    <option value="Pending" {% if status_filter == "Pending" %} selected="selected" {% endif %}>#}
+    {#                        Pending#}
+    {#                    </option>#}
+    {#                </select>#}
+    {#            </div>#}
+    {##}
+    {#            <button type="submit" value="filter" class="btn btn-success">Filter</button>#}
+    {#        </div>#}
+    {#    </form>#}
+
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissable ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>{{ message.tags }} !!</strong> {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <br>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Username</th>
+            <th>Contact</th>
+            <th>Branch</th>
+            <th>Problem Domain</th>
+            <th>Status</th>
+            <th>Remarks</th>
+            <th>Issue Date</th>
+            <th>Ticket</th>
+            <th>Source</th>
+            <th>Employee</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for obj in filter.qs %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ obj.client_id }} </td>
+                <td>{{ obj.contact }} </td>
+                <td>{{ obj.branch_id }}</td>
+                <td>{{ obj.problem_domain_id }} </td>
+                <td>{{ obj.status }}</td>
+                <td>{{ obj.remarks }}</td>
+                <td>{{ obj.issue_date }}</td>
+                <td>
+                    {% if obj.ticket is not Null %}
+                        {{ obj.ticket }}
+                    {% endif %}
+                </td>
+                <td>{{ obj.source }}</td>
+                <td>{{ obj.employee_id }}</td>
+                <td>
+                    <a href="{% url 'tickets:edit' obj.id %}">
+                        <i class="fas fa-pen-square" title="edit"></i>
+                    </a>
+                    &nbsp;
+                    {% if user.is_admin %}
+                    <a href="{% url 'tickets:delete' obj.id %}" data-toggle="modal" data-target="#obj-{{ obj.id }}">
+                        <i class="far fa-trash-alt btn-outline-danger" title="delete"></i>
+                    </a>
+                    {% endif %}
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are You Sure?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="{% url 'tickets:delete' obj.id %}">
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}

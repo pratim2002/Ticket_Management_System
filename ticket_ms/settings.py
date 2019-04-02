@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'ticket_ms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE' : 'django.db.backends.postgresql',
-        'NAME'      : 'tickets',
-        'USER'      : 'postgres',
-        'PASSWORD'  : 'Neetyou2',
-        'HOST'      : 'localhost',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'record_ms',
+        'USER': 'neetyes',
+        'PASSWORD': 'Neetyou2',
+        'HOST': 'localhost',
     }
 }
 
@@ -140,7 +140,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 LOGIN_REDIRECT_URL = '/'
 
 MESSAGE_TAGS = {
-    messages.ERROR : 'danger'
+    messages.ERROR: 'danger'
 }
 
 
@@ -152,3 +152,6 @@ EMAIL_HOST_USER = 'andisasimkhada@gmail.com'
 EMAIL_HOST_PASSWORD = 'Neetyou2'
 
 BASE_URL = 'http://localhost:8000'
+
+# username:prabin
+# password:orchidcafe

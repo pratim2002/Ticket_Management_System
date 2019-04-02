@@ -4,56 +4,51 @@
 {% block content %}
 
 <br>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissable ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>{{ message.tags }} !!</strong> {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
 <div class="row">
-    <div class="col-md-3">
-        <a href="{% url 'organizations:list' %}">
-            <div class="card text-center blue">
+    <div class="col-md-4">
+        <a href="{% url 'tickets:create' %}">
+            <div class="card text-center green">
                 <div class="card-body">
-                    <i class="fas fa-briefcase fa-8x white"></i>
+                    <i class="fas fa-book fa-8x white"></i>
                 </div>
                 <div class="card-footer white">
-                    Organizations
+                    ADD RECORD
                 </div>
             </div>
         </a>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <a href="{% url 'employees:list' %}">
             <div class="card text-center green">
                 <div class="card-body">
-                    <i class="fas fa-users fa-8x white"></i>
+                   <i class="fas fa-users fa-8x white"></i>
+
                 </div>
                 <div class="card-footer white">
-                    Employees
+                    EMPLOYEE
                 </div>
             </div>
         </a>
     </div>
-    <div class="col-md-3">
-        <a href="{% url 'products:list' %}">
-            <div class="card text-center blue">
-                <div class="card-body">
-                    <i class="fab fa-palfed fa-8x white"></i>
-                </div>
-                <div class="card-footer white">
-                    Products
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-3">
-        <a href="{% url 'tickets:create' %}">
+    <div class="col-md-4">
+        <a href="{% url 'tickets:list' %}">
             <div class="card text-center green">
                 <div class="card-body">
                     <i class="fas fa-ticket-alt fa-8x white"></i>
                 </div>
                 <div class="card-footer white">
-                    Generate Ticket
+                    RECORDS
                 </div>
             </div>
         </a>
     </div>
 </div>
-
-
 {% endblock %}

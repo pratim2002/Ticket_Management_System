@@ -8,16 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href='{% url "organizations:list" %}'>ORGANIZATION</a>
+                <a class="nav-link" href='{% url "organizations:list" %}'>CLIENTS</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href='{% url "tickets:list" %}'>TICKETS</a>
+                <a class="nav-link" href='{% url "tickets:list" %}'>RECORD</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href='{% url "employees:list" %}'>EMPLOYEE</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href='{% url "products:list" %}'>PRODUCT</a>
+                <a class="nav-link" href='{% url "tickets:branch_list" %}'>BRANCH</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href='{% url "tickets:problem_list" %}'>PROBLEM_DOMAIN</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href='{% url "users:list" %}'>USER</a>

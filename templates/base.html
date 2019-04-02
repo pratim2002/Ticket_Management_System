@@ -1,18 +1,17 @@
-{% load static %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% block head_title %} TMS {% endblock head_title %}</title>
+    <title>{% block head_title %} RECORD {% endblock head_title %}</title>
     {% block stylesheet %}
-    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css' %}">
-
-    <link rel="stylesheet" href="{% static 'bower_components/font-awesome/web-fonts-with-css/css/fawesome.css' %}">
-
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
-
+        <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">
+        <link rel="stylesheet"
+              href="{% static 'bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css' %}">
+        <link rel="stylesheet"
+              href="{% static 'bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
     {% block extra_head %}
     {% endblock %}
@@ -20,15 +19,12 @@
 <body>
 <div class="page-wrapper">
     {% if user.is_authenticated %}
-    {% if user.is_admin %}
-    {% include 'includes/partial_admin_menu.html' %}
-    {% elif user.is_employee %}
-    {% include 'includes/partial_employee_menu.html' %}
+        {% if user.is_admin %}
+            {% include 'includes/partial_admin_menu.html' %}
+        {% else %}
+            {% include 'includes/partial_employee_menu.html' %}
+        {% endif %}
     {% endif %}
-    {% else %}
-    {% include 'includes/partial_home_menu.html' %}
-    {% endif %}
-
     <section class="content">
         <div class="container-fluid">
             {% block content %}
@@ -38,13 +34,18 @@
     <br>
     {% include 'includes/footer.html' %}
 </div>
+
 <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
 <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js' %}"></script>
 
+
 {% block javascript %}
-
-
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
 {% endblock %}
 </body>
 </html>

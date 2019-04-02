@@ -3,71 +3,79 @@
 {% block head_title %} Users|{{ block.super }} {% endblock head_title %}
 {% block content %}
 
-<div style="float:right">&nbsp;
-    <a href='{% url "users:create" %}' class="btn btn-primary" style="margin-top:8px;">Add User</a>
-</div>
+    <div style="float:right">&nbsp;
+        <a href='{% url "users:create" %}' class="btn btn-primary" style="margin-top:8px;">Add User</a>
+    </div>
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Users</a></li>
-    </ol>
-</nav>
-<hr>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Users</a></li>
+        </ol>
+    </nav>
+    <hr>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissable ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>{{ message.tags }} !!</strong> {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
 
-<table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-        <th>S.N.</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Username</th>
-        <th>Role</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for user in users %}
-    <tr>
-        <td>{{ forloop.counter }}</td>
-        <td>{{ user.first_name }} {{ user.last_name }}</td>
-        <td>{{ user.email }} </td>
-        <td>{{ user.username }} </td>
-        <td>{{ user.role }}</td>
-        <td>
-            <a href="{% url 'users:edit' user.id %}">
-                <i class="fas fa-pen-square" title="edit"></i>
-            </a>
-            &nbsp;
-            <a href="{% url 'users:delete' user.id %}" data-toggle="modal" data-target="#user-{{ user.id }}">
-                <i class="far fa-trash-alt" title="delete"></i>
-            </a>
-            <!-- Modal -->
-            <div class="modal fade" id="user-{{ user.id }}" tabindex="-1" role="dialog"
-                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Are You Sure?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a href="{% url 'users:delete' user.id %}">
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </a>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email }} </td>
+                <td>{{ user.username }} </td>
+                <td>{{ user.role }}</td>
+                <td>
+                    <a href="{% url 'users:edit' user.id %}">
+                        <i class="fas fa-pen-square" title="edit"></i>
+                    </a>
+                    &nbsp;
+                    <a href="{% url 'users:delete' user.id %}" data-toggle="modal" data-target="#user-{{ user.id }}">
+                        <i class="far fa-trash-alt btn-outline-danger" title="delete"></i>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="user-{{ user.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are You Sure?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="{% url 'users:delete' user.id %}">
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

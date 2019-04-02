@@ -5,13 +5,19 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
-        <li class="breadcrumb-item active"><a href="{% url 'organizations:list' %}">Organization List</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Edit Organization</li>
+        <li class="breadcrumb-item active"><a href="{% url 'organizations:list' %}">Client List</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Client Detail</li>
     </ol>
 </nav>
 <hr>
 
 <form method="POST" enctype="multipart/form-data" class="offset-md-3"> {% csrf_token %}
+    <div class="form-group row">
+        <label class="col-md-2 col-form-label">{{ form.username.label }} <span class="required-field">*</span></label>
+        <div class="col-md-6">
+            {{ form.username }}
+        </div>
+    </div>
     <div class="form-group row">
         <label class="col-md-2 col-form-label">{{ form.name.label }} <span class="required-field">*</span></label>
         <div class="col-md-6">
@@ -19,7 +25,7 @@
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.address.label }} <span class="required-field">*</span></label>
+        <label class="col-sm-2 col-form-label">{{ form.address.label }} </label>
         <div class="col-sm-6">
             {{ form.address}}
         </div>
@@ -37,51 +43,15 @@
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.contact_person1.label }}</label>
+        <label class="col-sm-2 col-form-label">{{ form.mobile.label }}</label>
         <div class="col-sm-6">
-            {{ form.contact_person1}}
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.contact_person2.label }}</label>
-        <div class="col-sm-6">
-            {{ form.contact_person2 }}
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.contact_person3.label }}</label>
-        <div class="col-sm-6">
-            {{ form.contact_person3 }}
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.mobile1.label }}</label>
-        <div class="col-sm-6">
-            {{ form.mobile1}}
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.mobile2.label }}</label>
-        <div class="col-sm-6">
-            {{ form.mobile2 }}
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.mobile3.label }}</label>
-        <div class="col-sm-6">
-            {{ form.mobile3 }}
+            {{ form.mobile }}
         </div>
     </div>
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">{{ form.is_active.label }}</label>
         <div class="col-sm-6">
             {{ form.is_active }}
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">{{ form.logo.label }}</label>
-        <div class="col-sm-6">
-            {{ form.logo}}
         </div>
     </div>
     <button type="submit" class="btn btn-primary offset-md-2">Update</button>

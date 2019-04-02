@@ -1,5 +1,7 @@
+
+
 .bg-light {
-    background-color: #f94a12 !important;
+    background-color: #902f59 !important;
 }
 
 ol.breadcrumb {
@@ -15,7 +17,7 @@ ol.breadcrumb {
 }
 
 .footer{
-  background: #f94a12a1;
+  background: #902f59ab;
   padding: 10px 0px;
 
   bottom: 0px;

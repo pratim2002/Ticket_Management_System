@@ -33,10 +33,11 @@ def createview(request):
         user.last_name = instance.last_name
         user.email = instance.email
         user.username = instance.email
-        user.set_password("{}{}".format(instance.first_name,'@Zeftware'))
+        user.set_password("{}{}".format(instance.first_name, '@Zeftware'))
         user.role = USER_ROLES.employee
         user.save()
         instance.save()
+        messages.success(request, "Employee added.")
         return HttpResponseRedirect('/employees/')
 
     template_name = 'employees/forms.html'
@@ -56,6 +57,7 @@ def editview(request, id=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
+        messages.success(request, "Employee edited.")
         return HttpResponseRedirect('/employees/')
     if form.errors:
         errors = form.errors
@@ -73,6 +75,7 @@ def editview(request, id=None):
 def deleteview(request, id=None):
     instance = get_object_or_404(Employee, id=id)
     instance.delete()
+    messages.info(request, "Employee deleted.")
     return redirect('employees:list')
 
 
@@ -82,6 +85,7 @@ def detailview(request, id=None):
     employee = get_object_or_404(Employee, id=id)
     context = {
         'employees': employees,
-        'employee' : employee
+        'employee': employee
     }
-    return render(request, 'employees/detail.html', context)
+    templates = 'employees/detail.html'
+    return render(request, templates, context)

@@ -3,96 +3,126 @@
 {% block head_title %} Organizations|{{ block.super }} {% endblock head_title %}
 {% block content %}
 
-<div style="float:right">
-    <a href='{% url "organizations:list" %}?&output=pdf' class="btn btn-primary" style="margin-top:8px;" target="_blank">PDF
-        Report</a> &nbsp;
-    {% if user.is_admin %}
-    <a href='{% url "organizations:create" %}' class="btn btn-primary" style="margin-top:8px;">Add Organization</a>
-    {% endif %}
-</div>
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'organizations:list' %}"> Organization
-            List</a></li>
-    </ol>
-</nav>
-<hr>
-
-<form method="GET" action="">
-    <div class="row">
-        <div class="col-md-4 offset-md-4">
-            <input type="text" class="form-control" name="q" placeholder="Search Organization"
-                   value="{{ request.GET.q }}">
-        </div>
-        <div class="col-md-1">
-            <input type="submit" value="Search" class="btn btn-success">
-        </div>
+    <div style="float:right">
+        <a href='{% url "organizations:list" %}?&output=pdf' class="btn btn-primary" style="margin-top:8px;"
+           target="_blank">PDF
+            Report</a> &nbsp;
+        {% if user.is_admin %}
+            <a href='{% url "organizations:create" %}' class="btn btn-primary active" style="margin-top:8px;">Add
+                Client</a>
+        {% endif %}
     </div>
-</form>
-<br>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+            <li class="breadcrumb-item text-muted" aria-current="page"> Client
+                List
+            </li>
+        </ol>
+    </nav>
+    <hr>
 
-<table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-        <th>S.N.</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Phone</th>
-        <th>IT officer</th>
-        <th>Mobile</th>
-        <th>Is active</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for obj in object_list %}
-    <tr>
-        <td>{{ forloop.counter }}</td>
-        <td><a href="{% url 'organizations:detail' obj.id %}"> {{ obj }}</a></td>
-        <td>{{ obj.address }}</td>
-        <td>{{ obj.phone }}</td>
-        <td>{{ obj.contact_person2 }}</td>
-        <td>{{ obj.mobile2 }}</td>
-        <td>{{ obj.is_active }}</td>
-        <td>
-            <a href="{% url 'organizations:edit' obj.id %}">
-                <i class="fas fa-pen-square" title="edit"></i>
-            </a> &nbsp;
-            {% if user.is_admin %}
-            <a href="{% url 'organizations:delete' obj.id %}" data-toggle="modal" data-target="#obj-{{ obj.id }}">
-                <i class="far fa-trash-alt" title="delete"></i>
-            </a>
-            {% endif %}
-            <!-- Modal -->
-            <div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"
-                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Are You Sure?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a href="{% url 'organizations:delete' obj.id %}">
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </a>
+    <form method="GET" action="">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <input type="text" class="form-control" name="q" placeholder="Search Client"
+                       value="{{ request.GET.q }}">
+            </div>
+            <div class="col-md-1">
+                <input type="submit" value="Search" class="btn btn-success">
+            </div>
+        </div>
+    </form>
+    <br>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>{{ message.tags }} !!</strong> {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>E-mail</th>
+            <th>Mobile</th>
+            <th>Is active</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ obj }}</td>
+                <td>{{ obj.name }} </td>
+                <td>
+                    {% if obj.address is not Null %}
+                        {{ obj.address }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if obj.phone is not Null %}
+                        {{ obj.phone }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if obj.email is not Null %}
+                        {{ obj.email }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if obj.mobile is not Null %}
+                        {{ obj.mobile }}
+                    {% endif %}
+                </td>
+                <td>{{ obj.is_active }}</td>
+                <td>
+                    <a href="{% url 'organizations:edit' obj.id %}">
+                        <i class="fas fa-pen-square" title="edit"></i>
+                    </a> &nbsp;
+                    {% if user.is_admin %}
+                        <a href="{% url 'organizations:delete' obj.id %}" data-toggle="modal"
+                           data-target="#obj-{{ obj.id }}">
+                            <i class="far fa-trash-alt btn-outline-danger" title="delete"></i>
+                        </a>
+                    {% endif %}
+                    <!-- Modal -->
+                    <div class="modal fade" id="obj-{{ obj.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Client Delete</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are You Sure?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="{% url 'organizations:delete' obj.id %}">
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
-<div class="pagination ">
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination ">
     <span class="step-links">
         {% if object_list.has_previous %}
             <a href="?page=1">&laquo; first</a>
@@ -100,7 +130,7 @@
         {% endif %}
 
         <span class="current">
-            Page {{ object_list.number }} of {{ contacts.paginator.num_pages }}.
+            Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
         </span>
 
         {% if object_list.has_next %}
@@ -108,6 +138,6 @@
             <a href="?page={{ object_list.paginator.num_pages }}">last &raquo;</a>
         {% endif %}
     </span>
-</div>
+    </div>
 
 {% endblock %}

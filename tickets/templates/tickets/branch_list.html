@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %} Tickets|{{ block.super }} {% endblock head_title %}
+{% block content %}
+    {%  if user.is_admin %}
+    <div style="float:right">
+        <a href='{% url "tickets:branch_create" %}' class="btn btn-primary" style="margin-top:8px;">Add Branch</a>
+    </div>
+    {% endif %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> Branches </li>
+        </ol>
+    </nav>
+    <hr>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissable ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>{{ message.tags }} !!</strong> {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <table class="table table-bordered table-hover col-md-4 offset-4">
+        <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Name</th>
+            {%  if user.is_admin %}
+            <th>Action</th>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for branch in branch_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td> {{ branch }}</td>
+                {%  if user.is_admin %}
+                <td>
+                    <a href="{% url 'tickets:branch_edit' branch.id %}">
+                        <i class="fas fa-pen-square" title="edit"></i>
+                    </a> &nbsp;
+                    <a href="{% url 'tickets:branch_delete' branch.id %}" data-toggle="modal"
+                       data-target="#branch-{{ branch.id }}">
+                        <i class="far fa-trash-alt btn-outline-danger" title="delete"></i>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="branch-{{ branch.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel">Organization Delete</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are You Sure?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="{% url 'tickets:branch_delete' branch.id %}">
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

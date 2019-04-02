@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block head_title %} {{ title }} | {{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'users:index' %}">Home</a></li>
+        <li class="breadcrumb-item active"><a href="{% url 'tickets:problem_list' %}">Problem Domain</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Problem</li>
+    </ol>
+</nav>
+<hr>
+
+<form method="POST" enctype="multipart/form-data" class="offset-md-4"> {% csrf_token %}
+    <div class="form-group row">
+        <label class="col-md-1 col-form-label">{{ form.problem.label }}</label>
+        <div class="col-md-6">
+            {{ form.problem }}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary offset-md-1">Add Problem</button>
+</form>
+
+{% endblock %}

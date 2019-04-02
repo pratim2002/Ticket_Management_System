@@ -40,7 +40,8 @@ def register(request):
         form = RegisterForm()
 
     context = {'form': form}
-    return render(request, 'users/register.html', context)
+    templates = 'users/register.html'
+    return render(request, templates, context)
 
 
 def user_login(request):
@@ -65,15 +66,16 @@ def user_login(request):
             user = authenticate(username=username, password=password)
             if user is None:
                 messages.error(request, "Invalid login credentials")
-                return render(request, 'users/login.html', context)
+                templates = 'users/login.html'
+                return render(request, templates, context)
             else:
                 login(request, user)
                 if next:
                     return redirect(next)
-                messages.info(request, 'Sussecfully logged in')
+                messages.success(request, 'Successfully logged in!')
                 return redirect('users:index')
-
-    return render(request, 'users/login.html', context)
+    templates = 'users/login.html'
+    return render(request, templates, context)
 
 
 @login_required
@@ -91,7 +93,8 @@ def user_password_change(request):
     context = {
         'form': form
     }
-    return render(request, 'users/change_password.html', context)
+    templates = 'users/change_password.html'
+    return render(request, templates, context)
 
 
 def user_logout(request):
@@ -99,7 +102,7 @@ def user_logout(request):
     Logout a user
     """
     logout(request)
-    messages.success(request, "Logged out successfully!")
+    messages.info(request, "Logged out successfully!")
     return redirect('users:login')
 
 
@@ -110,7 +113,8 @@ def user_listview(request):
     context = {
         'users': users
     }
-    return render(request, 'users/user_list.html', context)
+    templates = 'users/user_list.html'
+    return render(request, templates, context)
 
 
 @login_required
@@ -122,6 +126,7 @@ def user_editview(request, id=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
+        messages.success(request, "User edited.")
         return HttpResponseRedirect('/users/')
     if form.errors:
         errors = form.errors
@@ -136,6 +141,7 @@ def user_editview(request, id=None):
 def user_deleteview(request, id=None):
     instance = get_object_or_404(User, id=id)
     instance.delete()
+    messages.info(request, "User deleted.")
     return redirect('users:list')
 
 
@@ -151,13 +157,15 @@ def user_createview(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
+            messages.info(request, "User added.")
             return redirect('users:list')
 
     else:
         form = RegisterForm()
 
     context = {'form': form}
-    return render(request, 'users/forms.html', context)
+    templates = 'users/forms.html'
+    return render(request, templates, context)
 
 
 # @login_required
