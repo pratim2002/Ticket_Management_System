@@ -2,200 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d4a1922-7943-4da0-9d10-5f13ba8d2f7b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TMS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employees/templates/employees/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/employees/templates/employees/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employees/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/employees/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/templates/organizations/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/templates/organizations/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/templates/organizations/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/templates/organizations/forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/templates/organizations/forms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/templates/organizations/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/templates/organizations/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/.bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/.bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/UPGRADING.md" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/UPGRADING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/categories.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/icons.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/icons.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/icons.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/shims.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/shims.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/shims.yml" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/metadata/shims.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/brands/creative-commons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/brands/creative-commons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/brands/lastfm-square.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/brands/lastfm-square.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/address-book.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/address-book.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/address-card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/address-card.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/id-badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/id-badge.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/id-card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/id-card.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/user-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/user-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/user.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/regular/user.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/address-book.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/address-book.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/address-card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/address-card.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/cloud-download-alt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/cloud-download-alt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/cloud-upload-alt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/cloud-upload-alt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/cloud.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/cloud.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/id-badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/id-badge.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/id-card-alt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/id-card-alt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/id-card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/id-card.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/sliders-h.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/sliders-h.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-md.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-md.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-plus.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-secret.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-secret.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-times.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user-times.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/user.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/users.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/raw-svg/solid/users.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/svg-sprites/fa-brands.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/svg-sprites/fa-brands.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/svg-sprites/fa-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/svg-sprites/fa-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/svg-sprites/fa-solid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/svg-sprites/fa-solid.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-common-types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-common-types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-common-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-common-types/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/faCreativeCommons.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/faCreativeCommons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/index.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/index.es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/shakable.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/shakable.es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/shakable.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/shakable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faAddressBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faAddressBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faAddressCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faAddressCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faIdBadge.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faIdBadge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faIdCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faIdCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faUserCircle.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/faUserCircle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/index.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/index.es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/shakable.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/shakable.es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/shakable.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/shakable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faAddressBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faAddressBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faAddressCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faAddressCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faCloud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faCloudDownloadAlt.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faCloudDownloadAlt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faCloudUploadAlt.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faCloudUploadAlt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faIdBadge.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faIdBadge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faIdCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faIdCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faIdCardAlt.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faIdCardAlt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faSlidersH.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faSlidersH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserCircle.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserCircle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserMd.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserMd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserPlus.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserPlus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserSecret.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserSecret.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserTimes.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUserTimes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/faUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/index.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/index.es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/shakable.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/shakable.es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/shakable.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/shakable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/css/fontawesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/css/fontawesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/less/_icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/less/_icons.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/less/_variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/less/_variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/less/fontawesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/less/fontawesome.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/scss/_icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/scss/fontawesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/scss/fontawesome.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/index.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/index.es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/css/fa-svg-with-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/css/fa-svg-with-js.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-brands.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-brands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-brands.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-brands.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-regular.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-regular.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-regular.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-regular.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-solid.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-solid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-solid.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-solid.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-v4-shims.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-v4-shims.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-v4-shims.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fa-v4-shims.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome-all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome-all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome-all.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/svg-with-js/js/fontawesome.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/use-on-desktop/Font Awesome 5 Brands-Regular-400.otf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/use-on-desktop/Font Awesome 5 Brands-Regular-400.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/use-on-desktop/Font Awesome 5 Free-Regular-400.otf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/use-on-desktop/Font Awesome 5 Free-Regular-400.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/use-on-desktop/Font Awesome 5 Free-Solid-900.otf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/use-on-desktop/Font Awesome 5 Free-Solid-900.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-brands.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-brands.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-brands.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-brands.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-regular.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-regular.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-regular.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-regular.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-solid.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-solid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-solid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fa-solid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fawesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/css/fontawesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/_icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/_icons.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/_variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/_variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fa-brands.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fa-brands.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fa-regular.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fa-regular.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fa-solid.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fa-solid.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fontawesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/less/fontawesome.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/_icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fa-brands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fa-brands.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fa-regular.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fa-regular.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fa-solid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fa-solid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fontawesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/scss/fontawesome.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bower_components/font-awesome/web-fonts-with-css/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/employee_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employee_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/partial_admin_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/partial_admin_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/partial_employee_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/partial_employee_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/partial_home_menu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket_ms/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket_ms/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/templates/tickets/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/templates/tickets/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/templates/tickets/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/templates/tickets/forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/templates/tickets/forms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/templates/tickets/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/templates/tickets/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/views/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/user_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket_ms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket_ms/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -253,13 +61,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="record_ms@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="record_ms: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="access methods" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -446,9 +247,59 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1772380574">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.66" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="1" />
+          <entry key="py" value="7" />
+          <entry key="users_user" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Database Element" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2190">
+              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -474,8 +325,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/employees/urls.py" />
-        <option value="$PROJECT_DIR$/organizations/forms.py" />
         <option value="$PROJECT_DIR$/products/forms.py" />
         <option value="$PROJECT_DIR$/products/urls.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
@@ -525,6 +374,8 @@
         <option value="$PROJECT_DIR$/tickets/templates/tickets/branch_list.html" />
         <option value="$PROJECT_DIR$/tickets/views/problem_domain_views.py" />
         <option value="$PROJECT_DIR$/tickets/templates/tickets/problem_list.html" />
+        <option value="$PROJECT_DIR$/ticket_ms/views.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -881,8 +732,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="683" />
     <option name="y" value="25" />
-    <option name="width" value="1366" />
+    <option name="width" value="683" />
     <option name="height" value="692" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -893,42 +745,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Ticket_MS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ticket_MS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ticket_MS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ticket_MS" type="462c0819:PsiDirectoryNode" />
-              <item name="tickets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ticket_MS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ticket_MS" type="462c0819:PsiDirectoryNode" />
-              <item name="tickets" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ticket_MS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ticket_MS" type="462c0819:PsiDirectoryNode" />
-              <item name="tickets" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="tickets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ticket_MS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ticket_MS" type="462c0819:PsiDirectoryNode" />
-              <item name="tickets" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ticket_ms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ticket_ms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -936,7 +764,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ZProjects/TMS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -989,8 +817,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="692" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49726775" visible="true" weight="0.23636363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49726775" visible="true" weight="0.2590909" />
       <window_info id="Structure" order="1" sideWeight="0.5027322" side_tool="true" weight="0.19061802" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1001,7 +830,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32922536" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291815" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3113879" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.76156586" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -1014,23 +843,23 @@
       <window_info anchor="right" id="SciView" order="4" weight="0.32954547" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49726775" visible="true" weight="0.22121212" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49726775" visible="true" weight="0.24015151" />
       <window_info id="Structure" order="1" sideWeight="0.5027322" side_tool="true" weight="0.19061802" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3291815" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.568662" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32922536" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31494662" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.568662" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32922536" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291815" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3102837" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.3291815" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1063,34 +892,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tickets/templates/tickets/branch_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/templates/tickets/problem_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/templates/tickets/problem_forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/templates/tickets/branch_forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tickets/views/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1172,13 +973,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/826f985e-8b20-4bd7-b4df-ce1c0a561b6c/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://826f985e-8b20-4bd7-b4df-ce1c0a561b6c/database/record_ms/schema/public/table/tickets_ticket">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://826f985e-8b20-4bd7-b4df-ce1c0a561b6c/database/record_ms/schema/public/table/tickets_ticket" />
     <entry file="file://$PROJECT_DIR$/staticfiles/css/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1196,27 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticket_ms/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="150" column="33" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1269,13 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1312,21 +1079,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tickets/templates/tickets/branch_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1334,23 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/templates/tickets/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tickets/views/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1372,6 +1111,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://826f985e-8b20-4bd7-b4df-ce1c0a561b6c/database/record_ms/schema/public/table/users_user" />
+    <entry file="file://$PROJECT_DIR$/ticket_ms/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="150" column="33" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket_ms/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket_ms/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tickets/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tickets/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tickets/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tickets/views/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tickets/templates/tickets/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="135" column="42" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tickets/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2190">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>

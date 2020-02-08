@@ -17,6 +17,7 @@ from .utils import render_to_pdf
 #         # return HttpResponse(pdf, content_type='application/pdf')
 #         return HttpResponse(html)
 
+
 def generate_view(request, *args, **kwargs):
     template = get_template('pdf/invoice.html')
     context = {
