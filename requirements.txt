@@ -11,7 +11,7 @@ pdfkit==0.6.1
 Pillow==5.2.0
 psycopg2==2.7.5
 psycopg2-binary==2.7.5
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pytz==2018.5
 reportlab==3.5.6
 six==1.11.0
